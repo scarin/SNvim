@@ -12,4 +12,3 @@ I've been using vim for a while, and this is the configuration I'm more satisfie
 ##### Feature
 Auto install lsp server, you can setup your server with this file:  
 **nvim/lua/plugin_config/config/lsp_table.lua**  
-Default server:
