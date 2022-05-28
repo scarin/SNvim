@@ -5,7 +5,7 @@ I've been using vim for a while, and this is the configuration I'm more satisfie
 
 ##### Quick Start
 1. git clone whole project to your nvim .config location.
-2. install Packer. (LINK)['https://github.com/wbthomason/packer.nvim#quickstart']
+2. install Packer. [LINK](https://github.com/wbthomason/packer.nvim#quickstart')
 3. start nvim
 4. enter cmd PackerSync
 
