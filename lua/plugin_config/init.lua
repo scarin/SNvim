@@ -19,6 +19,11 @@ require("Comment").setup({
 		eol = 'gca',---Add comment at the end of line
 	}})
 
+require('renamer').setup({
+	title = '*RENAME*',
+	min_width = 30,
+	max_width = 50
+})
 --[[
 eg:
 PERF:

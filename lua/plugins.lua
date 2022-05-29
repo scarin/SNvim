@@ -43,7 +43,7 @@ local plugins = {
 	{ 'justinmk/vim-sneak' },
 	{ 'williamboman/nvim-lsp-installer' },
 	{ 'neovim/nvim-lspconfig' },
-	{	'folke/todo-comments.nvim' },
+	{ 'folke/todo-comments.nvim' },
 	{ 'windwp/nvim-autopairs' },
 	{ 'lukas-reineke/indent-blankline.nvim' },
 	{ 'akinsho/toggleterm.nvim' },
@@ -51,11 +51,11 @@ local plugins = {
 	{
 		'akinsho/bufferline.nvim',
 		tag = "v2.*",
-		requires = 'kyazdani42/nvim-web-devicons'
+		requires = { { 'kyazdani42/nvim-web-devicons' } }
 	},
 	{
 		'nvim-lualine/lualine.nvim',
-		requires = { 'kyazdani42/nvim-web-devicons', opt = true }
+		requires = { { 'kyazdani42/nvim-web-devicons', opt = true } }
 	},
 	{
 		'nvim-treesitter/nvim-treesitter',
@@ -63,16 +63,21 @@ local plugins = {
 	},
 	{
 		'nvim-telescope/telescope.nvim',
-		requires = { 'nvim-lua/plenary.nvim' }
+		requires = { { 'nvim-lua/plenary.nvim' } }
 	},
 	{
 		'kyazdani42/nvim-tree.lua',
-		requires = { 'kyazdani42/nvim-web-devicons' }
+		requires = { { 'kyazdani42/nvim-web-devicons' } }
 	},
 	{
 		'goolord/alpha-nvim',
-		requires = { 'kyazdani42/nvim-web-devicons' },
-	}
+		requires = { { 'kyazdani42/nvim-web-devicons' } }
+	},
+	{
+		'filipdutescu/renamer.nvim',
+		branch = 'master',
+		requires = { { 'nvim-lua/plenary.nvim' } }
+	},
 }
 packer.startup({ function(use)
 	for _, v in pairs(plugins) do

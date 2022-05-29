@@ -48,6 +48,7 @@ local function set_key_map()
 			['<Leader>t'] = '<Cmd>TagbarToggle<CR>',
 
 			['<Leader>`'] = '<Cmd>tabnew<CR><Cmd>terminal<CR><Cmd>startinsert<CR>',
+			['<Leader>rn'] = '<Cmd>lua require("renamer").rename()<CR>',
 		},
 		['v'] = {},
 		['i'] = {
@@ -57,6 +58,7 @@ local function set_key_map()
 			['<C-l>'] = '<Right>',
 			['<C-j>'] = '<Down>',
 			['<C-k>'] = '<Up>',
+			['<F2>'] = '<Cmd>lua require("renamer").rename()<CR>',
 		},
 		['o'] = {
 			['}'] = 'a{',
