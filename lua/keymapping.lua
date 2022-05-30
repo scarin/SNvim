@@ -12,6 +12,7 @@ local function set_key_map()
 			['<S-Tab>'] = '<Cmd>BufferLineCyclePrev<CR>',
 			['<Leader>b'] = '<Cmd>BufferLinePick<CR>',
 			['<Leader>w'] = '<Cmd>BufferLinePickClose<CR>',
+			['U'] = '<C-r>',
 
 			['<Leader>1'] = '<Cmd>BufferLineGoToBuffer 1<CR>',
 			['<Leader>2'] = '<Cmd>BufferLineGoToBuffer 2<CR>',
@@ -49,6 +50,8 @@ local function set_key_map()
 
 			['<Leader>`'] = '<Cmd>tabnew<CR><Cmd>terminal<CR><Cmd>startinsert<CR>',
 			['<Leader>rn'] = '<Cmd>lua require("renamer").rename()<CR>',
+
+			['<C-t>'] = '<Cmd>exe v:count1 . "ToggleTerm"<CR>',
 		},
 		['v'] = {
 			['"'] = 'xi"<Esc>pa"<Esc>',
@@ -63,17 +66,20 @@ local function set_key_map()
 			['}'] = 'xi{<Esc>pa}<Esc>',
 		},
 		['i'] = {
-			['jk'] = '<Esc>',
+			['jkj'] = '<Esc>',
+			['kjk'] = '<Esc>',
 			['<C-s>'] = '<Esc><Cmd>w<CR>a',
 			['<C-h>'] = '<Left>',
 			['<C-l>'] = '<Right>',
 			['<C-j>'] = '<Down>',
 			['<C-k>'] = '<Up>',
 			['<F2>'] = '<Cmd>lua require("renamer").rename()<CR>',
+			['<C-t>'] = '<Esc><Cmd>exe v:count1 . "ToggleTerm"<CR>',
 		},
 		['o'] = {
 			-- you can use this to delete block inside
-			-- eg: d}, can delete text in {} block, include {}
+			-- eg: d{, can delete text in {} block, include {}
+			-- eg: y}, yank only text in {} block
 			['{'] = 'aB',
 			['}'] = 'iB',
 			['('] = 'ab',
@@ -99,15 +105,5 @@ end
 
 set_key_map()
 
--- redefind comment
 vim.api.nvim_set_keymap('', '<Leader>/', 'gcc', {})
-vim.api.nvim_set_keymap('', '<Leader>\\', 'gb', {})
-vim.api.nvim_set_keymap('', 'U', '<C-r>', {})
-
-vim.cmd [[
-" set
-autocmd TermEnter term://*toggleterm#* tnoremap <silent><c-t> <Cmd>exe v:count1 . "ToggleTerm"<CR>
-
-nnoremap <silent><c-t> <Cmd>exe v:count1 . "ToggleTerm"<CR>
-inoremap <silent><c-t> <Esc><Cmd>exe v:count1 . "ToggleTerm"<CR>
-]]
+vim.cmd('autocmd TermEnter term://*toggleterm#* tnoremap <silent><c-t> <Cmd>exe v:count1 . "ToggleTerm"<CR>')
