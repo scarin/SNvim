@@ -1,83 +1,4 @@
 local vim = G_VIM
-local cmd = vim.cmd or {}
-local cmp = require('cmp')
-cmp.setup({
-	snippet = {
-		expand = function(args)
-			vim.fn["vsnip#anonymous"](args.body) -- For `vsnip` users.
-		end,
-	},
-	window = {
-		completion = cmp.config.window.bordered(),
-		documentation = cmp.config.window.bordered(),
-	},
-	mapping = cmp.mapping.preset.insert({
-		['<C-b>'] = cmp.mapping.scroll_docs(-4),
-		['<C-f>'] = cmp.mapping.scroll_docs(4),
-		-- ['<C-Space>'] = cmp.mapping.complete(),
-		['<C-c>'] = cmp.mapping.abort(),
-		["<S-Tab>"] = cmp.mapping.select_prev_item(),
-		["<Tab>"] = cmp.mapping.select_next_item(),
-		-- Accept currently selected item. Set `select` to `false` to only confirm explicitly selected items.
-		['<CR>'] = cmp.mapping.confirm({ select = false }),
-	}),
-	sources = cmp.config.sources(
-		{
-			{ name = 'nvim_lsp' },
-			{ name = 'vsnip' },
-		},
-
-		{
-		{ name = 'buffer' },
-		{ name = 'path' },
-	}
-	)
-})
-
--- Use buffer source for `/` (if you enabled `native_menu`, this won't work anymore).
-cmp.setup.cmdline('/', {
-	mapping = cmp.mapping.preset.cmdline(),
-	sources = {
-		{ name = 'buffer' }
-	}
-})
-
--- Use cmdline & path source for ':' (if you enabled `native_menu`, this won't work anymore).
-cmp.setup.cmdline(':', {
-	mapping = cmp.mapping.preset.cmdline(),
-	sources = cmp.config.sources({
-		{ name = 'path' }
-	}, {
-		{ name = 'cmdline' }
-	})
-})
-
-vim.cmd [[autocmd! ColorScheme * highlight NormalFloat guibg=#1f2335]]
-vim.cmd [[autocmd! ColorScheme * highlight FloatBorder guifg=white guibg=#1f2335]]
-
--- LSP settings (for overriding per client)
-local handlers = {
-	["textDocument/hover"] = vim.lsp.with(vim.lsp.handlers.hover, { border = "rounded" }),
-	["textDocument/signatureHelp"] = vim.lsp.with(vim.lsp.handlers.signature_help, { border = "rounded" }),
-}
-
-
-local servers = {}
-for _, v in pairs(require('plugin_config.config.lsp_table')) do
-	table.insert(servers, v)
-end
-
--- Setup lspconfig.
-local capabilities = vim.lsp.protocol.make_client_capabilities()
-capabilities.textDocument.completion.completionItem.snippetSupport = true
-capabilities.textDocument.completion.completionItem.resolveSupport = {
-	properties = {
-		"documentation",
-		"detail",
-		"additionalTextEdits",
-	},
-}
-capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
 
 local opts = { noremap = true, silent = true }
 vim.api.nvim_set_keymap('n', '<space>e', '<cmd>lua vim.diagnostic.open_float(nil, {border="single"})<CR>', opts)
@@ -106,6 +27,38 @@ local on_attach = function(client, bufnr)
 	vim.api.nvim_buf_set_keymap(bufnr, 'n', '<space>ca', '<cmd>lua vim.lsp.buf.code_action()<CR>', opts)
 	vim.api.nvim_buf_set_keymap(bufnr, 'n', 'gr', '<cmd>lua vim.lsp.buf.references()<CR>', opts)
 	vim.api.nvim_buf_set_keymap(bufnr, 'n', '<space>f', '<cmd>lua vim.lsp.buf.formatting()<CR>', opts)
+
+	vim.api.nvim_buf_set_keymap(bufnr, 'n', '<space>s', '<cmd>lua vim.lsp.buf.document_symbol()<CR><cmd>vertical botright copen 70<CR>', opts)
+
+	vim.cmd('autocmd BufWritePre <buffer> lua vim.lsp.buf.formatting_sync()')
+
+	vim.cmd('autocmd CursorHold  <buffer> lua vim.lsp.buf.document_highlight()')
+	vim.cmd('autocmd CursorHoldI <buffer> lua vim.lsp.buf.document_highlight()')
+	vim.cmd('autocmd CursorMoved <buffer> lua vim.lsp.buf.clear_references()')
+end
+
+-- Setup lspconfig.
+local capabilities = vim.lsp.protocol.make_client_capabilities()
+capabilities.textDocument.completion.completionItem.snippetSupport = true
+capabilities.textDocument.completion.completionItem.resolveSupport = {
+	properties = {
+		"documentation",
+		"detail",
+		"additionalTextEdits",
+	},
+}
+
+capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
+
+-- LSP settings (for overriding per client)
+local handlers = {
+	["textDocument/hover"] = vim.lsp.with(vim.lsp.handlers.hover, { border = "rounded" }),
+	["textDocument/signatureHelp"] = vim.lsp.with(vim.lsp.handlers.signature_help, { border = "rounded" }),
+}
+
+local servers = {}
+for _, v in pairs(require('plugin_config.config.lsp_table')) do
+	table.insert(servers, v)
 end
 
 for _, server in pairs(servers) do
@@ -131,81 +84,7 @@ vim.diagnostic.config({
 	-- float = "bold",
 })
 
-
 for type, icon in pairs(signs) do
 	local hl = "DiagnosticSign" .. type
 	vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = hl })
 end
-
-local kind_icons = {
-	Text = "",
-	Method = "",
-	Function = "",
-	Constructor = "",
-	Field = "",
-	Variable = "",
-	Class = "ﴯ",
-	Interface = "",
-	Module = "",
-	Property = "ﰠ",
-	Unit = "",
-	Value = "",
-	Enum = "",
-	Keyword = "",
-	Snippet = "",
-	Color = "",
-	File = "",
-	Reference = "",
-	Folder = "",
-	EnumMember = "",
-	Constant = "",
-	Struct = "",
-	Event = "",
-	Operator = "",
-	TypeParameter = ""
-}
-
--- local cmp = require('cmp')
-cmp.setup {
-	formatting = {
-		fields = { "kind", "abbr" },
-		format = function(entry, vim_item)
-			-- Kind icons
-			-- This concatonates the icons with the name of the item kind
-			vim_item.kind = string.format('%s  %s ', kind_icons[vim_item.kind], vim_item.kind)
-			-- vim_item.kind = string.format('%s ', kind_icons[vim_item.kind])
-			-- Source
-			vim_item.menu = ({
-				buffer = "[Buffer]",
-				nvim_lsp = "[LSP]",
-				luasnip = "[LuaSnip]",
-				nvim_lua = "[Lua]",
-				latex_symbols = "[LaTeX]",
-			})[entry.source.name]
-			return vim_item
-		end
-	},
-}
-
-cmd [[
-	" gray
-	highlight! CmpItemAbbrDeprecated guibg=NONE gui=strikethrough guifg=#808080
-
-	" blue
-	highlight! CmpItemAbbrMatch guibg=NONE guifg=#569CD6
-	highlight! CmpItemAbbrMatchFuzzy guibg=NONE guifg=#569CD6
-
-	" light blue
-	highlight! CmpItemKindVariable guibg=NONE guifg=#9CDCFE
-	highlight! CmpItemKindInterface guibg=NONE guifg=#9CDCFE
-	highlight! CmpItemKindText guibg=NONE guifg=#9CDCFE
-
-	" pink
-	highlight! CmpItemKindFunction guibg=NONE guifg=#C586C0
-	highlight! CmpItemKindMethod guibg=NONE guifg=#C586C0
-
-	" front
-	highlight! CmpItemKindKeyword guibg=NONE guifg=#D4D4D4
-	highlight! CmpItemKindProperty guibg=NONE guifg=#D4D4D4
-	highlight! CmpItemKindUnit guibg=NONE guifg=#D4D4D4
-]]

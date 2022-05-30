@@ -1,5 +1,6 @@
 require('plugin_config.config.lsp_installer')
 require('plugin_config.config.lsp_config')
+require('plugin_config.config.cmp_config')
 require('plugin_config.config.ntree')
 require('plugin_config.config.treesitter')
 require('plugin_config.config.lualine')
@@ -26,6 +27,7 @@ require('renamer').setup({
 	min_width = 30,
 	max_width = 50
 })
+
 --[[
 eg:
 PERF:

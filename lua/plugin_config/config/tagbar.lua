@@ -2,7 +2,7 @@ local vim = G_VIM
 vim.cmd [[
 " let g:rust_use_custom_ctags_defs = 1
 let g:tagbar_type_rust = {
-  \ 'ctagsbin' : '/usr/local/Cellar/universal-ctags/HEAD-d9e8b20/bin/ctags',
+  \ 'ctagsbin' : 'ctags',
   \ 'ctagstype' : 'rust',
   \ 'kinds' : [
       \ 'n:modules',
