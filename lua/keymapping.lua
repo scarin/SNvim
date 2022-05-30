@@ -61,9 +61,14 @@ local function set_key_map()
 			['<F2>'] = '<Cmd>lua require("renamer").rename()<CR>',
 		},
 		['o'] = {
+			-- you can use this to delete block inside
+			-- eg: d}, can delete text in {} block, include {}
 			['}'] = 'a{',
 			[')'] = 'a)',
 			[']'] = 'a]',
+			['>'] = 'a>',
+			['"'] = 'a"',
+			['\''] = 'a\'',
 		},
 		['t'] = {
 			['<Esc>'] = '<C-\\><C-n><Cmd>BufferLinePickClose<CR>',
