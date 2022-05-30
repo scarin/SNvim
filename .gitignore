@@ -1,5 +1,7 @@
 plugin/
 
+.luarc.json
+
 # Compiled Lua sources
 luac.out
 
