@@ -50,7 +50,18 @@ local function set_key_map()
 			['<Leader>`'] = '<Cmd>tabnew<CR><Cmd>terminal<CR><Cmd>startinsert<CR>',
 			['<Leader>rn'] = '<Cmd>lua require("renamer").rename()<CR>',
 		},
-		['v'] = {},
+		['v'] = {
+			['"'] = 'xi"<Esc>pa"<Esc>',
+			['\''] = 'xi\'<Esc>pa\'<Esc>',
+			[')'] = 'xi(<Esc>pa)<Esc>',
+			['('] = 'xi(<Esc>pa)<Esc>',
+			[']'] = 'xi[<Esc>pa]<Esc>',
+			['['] = 'xi[<Esc>pa]<Esc>',
+			['<'] = 'xi<<Esc>pa><Esc>',
+			['>'] = 'xi<<Esc>pa><Esc>',
+			['{'] = 'xi{<Esc>pa}<Esc>',
+			['}'] = 'xi{<Esc>pa}<Esc>',
+		},
 		['i'] = {
 			['jk'] = '<Esc>',
 			['<C-s>'] = '<Esc><Cmd>w<CR>a',
@@ -63,10 +74,14 @@ local function set_key_map()
 		['o'] = {
 			-- you can use this to delete block inside
 			-- eg: d}, can delete text in {} block, include {}
-			['}'] = 'a{',
-			[')'] = 'a)',
-			[']'] = 'a]',
-			['>'] = 'a>',
+			['{'] = 'aB',
+			['}'] = 'iB',
+			['('] = 'ab',
+			[')'] = 'ib',
+			['['] = 'a[',
+			[']'] = 'i[',
+			['<'] = 'a<',
+			['>'] = 'i<',
 			['"'] = 'a"',
 			['\''] = 'a\'',
 		},

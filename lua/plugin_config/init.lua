@@ -10,14 +10,16 @@ require('plugin_config.config.onedark')
 
 
 require('indent_blankline').setup()
-require('nvim-autopairs').setup()
+require('nvim-autopairs').setup({
+	disable_in_visualblock = true
+})
 require('todo-comments').setup()
 require('toggleterm').setup()
 require('alpha').setup(require('alpha.themes.startify').config)
 require("Comment").setup({
 	extra = {
-		eol = 'gca',---Add comment at the end of line
-	}})
+		eol = 'gca', ---Add comment at the end of line
+	} })
 
 require('renamer').setup({
 	title = '*RENAME*',
