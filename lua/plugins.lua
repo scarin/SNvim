@@ -87,4 +87,58 @@ packer.startup({ function(use)
 	end
 end })
 
-require('plugin_config')
+-- require('plugin_config')
+
+local do_setup = function()
+	require('config.lsp_installer')
+	require('config.lsp_config')
+	require('config.cmp_config')
+	require('config.nvimtree')
+	require('config.treesitter')
+	require('config.lualine')
+	require('config.bufferline')
+	-- require('plugin_config.config.tagbar')
+	require('config.onedark')
+	-- require('plugin_config.config.rust_tools')
+
+
+	require('indent_blankline').setup()
+	require('nvim-autopairs').setup({
+		disable_in_visualblock = true
+	})
+	require('todo-comments').setup()
+	require('toggleterm').setup()
+	require('alpha').setup(require('alpha.themes.startify').config)
+	require("Comment").setup({
+		extra = {
+			eol = 'gca', ---Add comment at the end of line
+		} })
+
+	require('renamer').setup({
+		title = '*RENAME*',
+		min_width = 30,
+		max_width = 50
+	})
+
+	--[[
+eg:
+PERF:
+HACK:
+TODO:
+NOTE:
+FIX:
+BUG:
+ISSUE:
+FIXME:
+FIXIT:
+WARNING:
+
+cmd:
+:TodoQuickFix
+:TodoLocList
+:TodoTrouble
+:TodoTelescope
+]]
+end
+
+do_setup()

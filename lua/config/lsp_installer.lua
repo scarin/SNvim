@@ -4,7 +4,7 @@ local function lsp_setup()
 	local lsp = require('nvim-lsp-installer')
 
 	local servers = {}
-	for _, v in pairs(require('plugin_config.config.lsp_table')) do
+	for _, v in pairs(require('config.lsp_table')) do
 		table.insert(servers, v)
 	end
 

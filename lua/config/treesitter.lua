@@ -3,7 +3,7 @@ local function tree_setup()
 
 	local servers = {}
 
-	for k, _ in pairs(require('plugin_config.config.lsp_table')) do
+	for k, _ in pairs(require('config.lsp_table')) do
 		table.insert(servers, k)
 	end
 
