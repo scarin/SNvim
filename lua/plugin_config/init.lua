@@ -5,7 +5,7 @@ require('plugin_config.config.nvimtree')
 require('plugin_config.config.treesitter')
 require('plugin_config.config.lualine')
 require('plugin_config.config.bufferline')
-require('plugin_config.config.tagbar')
+-- require('plugin_config.config.tagbar')
 require('plugin_config.config.onedark')
 -- require('plugin_config.config.rust_tools')
 
