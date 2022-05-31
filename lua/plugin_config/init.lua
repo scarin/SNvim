@@ -1,7 +1,7 @@
 require('plugin_config.config.lsp_installer')
 require('plugin_config.config.lsp_config')
 require('plugin_config.config.cmp_config')
-require('plugin_config.config.ntree')
+require('plugin_config.config.nvimtree')
 require('plugin_config.config.treesitter')
 require('plugin_config.config.lualine')
 require('plugin_config.config.bufferline')
