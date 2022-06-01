@@ -92,7 +92,19 @@ ins_left {
 ins_left {
   -- mode component
   function()
-    return ' ' .. vim.fn.toupper(vim.api.nvim_get_mode()["mode"])
+    local os = vim.fn.substitute(vim.fn.system('uname'), "\n", "", "")
+    local icon
+    if os == 'Darwin' then
+      icon = '  '
+    elseif os == 'Win32' then
+      icon = '  '
+    elseif os == 'Unix' then
+      icon = '  '
+    else
+      icon = '  '
+    end
+    -- return ' ' .. vim.fn.toupper(vim.api.nvim_get_mode()["mode"])
+    return icon .. vim.fn.toupper(vim.api.nvim_get_mode()["mode"])
   end,
   color = function()
     -- auto change color according to neovims mode
@@ -186,14 +198,14 @@ ins_right {
   cond = conditions.hide_in_width,
   color = { fg = colors.green, gui = 'bold' },
 }
-
+--[[
 ins_right {
   'fileformat',
   fmt = string.upper,
   icons_enabled = false, -- I think icons are cool but Eviline doesn't have them. sigh
   color = { fg = colors.green, gui = 'bold' },
 }
-
+]]
 ins_right {
   'branch',
   icon = '',
