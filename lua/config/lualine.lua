@@ -1,4 +1,4 @@
-local vim = G_VIM or {}
+local vim = G_VIM
 
 -- Eviline config for lualine
 -- Author: shadmansaleh
@@ -92,7 +92,7 @@ ins_left {
 ins_left {
   -- mode component
   function()
-    return ''
+    return ' ' .. vim.fn.toupper(vim.api.nvim_get_mode()["mode"])
   end,
   color = function()
     -- auto change color according to neovims mode

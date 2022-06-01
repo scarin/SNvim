@@ -17,7 +17,7 @@ local function set_default_opt()
 		splitright     = true,
 		termguicolors  = true,
 		swapfile       = false,
-		timeoutlen     = 500,
+		timeoutlen     = 300,
 		title          = true,
 		updatetime     = 300,
 		writebackup    = false,
@@ -31,6 +31,17 @@ local function set_default_opt()
 		spelllang      = "en",
 		cursorline     = true,
 		guifont        = 'Liga_SFMono_Nerd_Font:h12',
+		expandtab      = true,
+		hidden         = true,
+		ruler          = false,
+		undofile       = true,
+		confirm        = true,
+		completeopt    = { "menuone", "noselect" },
+		conceallevel   = 0,
+		foldmethod     = "manual",
+		foldexpr       = "",
+		pumheight      = 10,
+		showmode       = false,
 	}
 
 	for k, v in pairs(default_options) do

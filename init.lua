@@ -1,5 +1,5 @@
-G_VIM = vim or {}
+G_VIM = vim
 
 require('setting')
 require('keymapping')
-require('plugins')
+require('config')

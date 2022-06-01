@@ -4,7 +4,7 @@ local function set_key_map()
 	local default_opts = { noremap = true, silent = true }
 
 	local mode_key_map = {
-		[''] = {},
+		-- [''] = {},
 		['n'] = {
 			['<Leader>l'] = '<Cmd>BufferLineCycleNext<CR>',
 			['<Leader>h'] = '<Cmd>BufferLineCyclePrev<CR>',
@@ -52,6 +52,7 @@ local function set_key_map()
 			['<Leader>rn'] = '<Cmd>lua require("renamer").rename()<CR>',
 
 			['<C-t>'] = '<Cmd>exe v:count1 . "ToggleTerm"<CR>',
+			['<F12>'] = '<Cmd>lua require("plugins")<CR><Cmd>PackerSync<CR>',
 		},
 		['v'] = {
 			['"'] = 'xi"<Esc>pa"<Esc>',
@@ -74,7 +75,7 @@ local function set_key_map()
 			['<C-j>'] = '<Down>',
 			['<C-k>'] = '<Up>',
 			['<F2>'] = '<Cmd>lua require("renamer").rename()<CR>',
-			['<C-t>'] = '<Esc><Cmd>exe v:count1 . "ToggleTerm"<CR>',
+			-- ['<C-t>'] = '<Esc><Cmd>exe v:count1 . "ToggleTerm"<CR>',
 		},
 		['o'] = {
 			-- you can use this to delete block inside
@@ -92,7 +93,8 @@ local function set_key_map()
 			['\''] = 'a\'',
 		},
 		['t'] = {
-			['<Esc>'] = '<C-\\><C-n><Cmd>BufferLinePickClose<CR>',
+			['<Esc>'] = '<C-\\><C-n>',
+			['<C-w>'] = '<C-\\><C-n><Cmd>BufferLinePickClose<CR>z'
 		},
 	}
 
@@ -101,9 +103,8 @@ local function set_key_map()
 			vim.api.nvim_set_keymap(k, k_, v_, default_opts)
 		end
 	end
+
+	vim.api.nvim_set_keymap('', '<Leader>/', 'gcc', {})
 end
 
 set_key_map()
-
-vim.api.nvim_set_keymap('', '<Leader>/', 'gcc', {})
-vim.cmd('autocmd TermEnter term://*toggleterm#* tnoremap <silent><c-t> <Cmd>exe v:count1 . "ToggleTerm"<CR>')
