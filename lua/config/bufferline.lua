@@ -2,8 +2,8 @@ local vim = G_VIM
 
 require('bufferline').setup {
   options = {
-    -- mode = "tabs",
-    numbers = "none",
+    mode = "buffers",
+    numbers = "ordinal",
     close_command = "bdelete! %d",
     -- right_mouse_command = "bdelete! %d",
     -- left_mouse_command = "buffer %d",

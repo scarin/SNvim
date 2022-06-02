@@ -103,7 +103,6 @@ ins_left {
     else
       icon = '  '
     end
-    -- return ' ' .. vim.fn.toupper(vim.api.nvim_get_mode()["mode"])
     return icon .. vim.fn.toupper(vim.api.nvim_get_mode()["mode"])
   end,
   color = function()
