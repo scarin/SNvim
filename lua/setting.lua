@@ -64,11 +64,13 @@ local function set_default_g()
     vim.cmd('autocmd vimenter * hi Normal guibg=NONE ctermbg=NONE')
   else
     local g_neovide = {
-      ['neovide_transparency'] = 0.90,
+      ['neovide_profiler'] = false,
+      ['neovide_refresh_rate'] = 120,
+      ['neovide_transparency'] = 0.9,
       ['neovide_remember_window_size'] = true,
       ['neovide_cursor_vfx_mode'] = "pixiedust",
       ['neovide_cursor_trail_length'] = 0.9,
-      ['neovide_cursor_animation_length'] = 0.01,
+      ['neovide_cursor_animation_length'] = 0.03,
     }
     for k, v in pairs(g_neovide) do
       vim.g[k] = v
