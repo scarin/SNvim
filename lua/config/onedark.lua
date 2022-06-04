@@ -3,7 +3,8 @@ local vim = G_VIM
 require('onedark').setup {
   -- Main options --
   style = 'warm', -- Default theme style. Choose between 'dark', 'darker', 'cool', 'deep', 'warm', 'warmer' and 'light'
-  transparent = vim.fn.exists('g:neovide') < 1 and true or false, -- Show/hide background
+  -- transparent = vim.fn.exists('g:neovide') < 1 and true or false, -- Show/hide background
+  transparent = vim.g.neovide == nil and true or false, -- Show/hide background
   term_colors = true, -- Change terminal color as per the selected theme style
   ending_tildes = true, -- Show the end-of-buffer tildes. By default they are hidden
   cmp_itemkind_reverse = false, -- reverse item kind highlights in cmp menu
