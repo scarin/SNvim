@@ -31,7 +31,7 @@ local function set_default_opt()
     spelllang      = "en",
     cursorline     = true,
     -- guifont        = 'Liga_SFMono_Nerd_Font:h12',
-    guifont        = 'JetBrainsMono_Nerd_Font:h13',
+    guifont        = 'JetBrainsMono_Nerd_Font:h12',
     expandtab      = true,
     hidden         = true,
     ruler          = false,
