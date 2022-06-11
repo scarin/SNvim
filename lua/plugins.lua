@@ -47,6 +47,7 @@ local plugins = {
   { 'folke/todo-comments.nvim' },
   { 'windwp/nvim-autopairs' },
   { 'lukas-reineke/indent-blankline.nvim' },
+  { 'prettier/vim-prettier' },
   -- { 'mfussenegger/nvim-dap' },
   -- { 'akinsho/toggleterm.nvim' },
 

@@ -54,7 +54,9 @@ end
 local function set_default_g()
   local default_g = {
     ['mapleader'] = ' ',
+    ['prettier#quickfix_enabled'] = 0,
   }
+  vim.cmd('autocmd TextChanged,InsertLeave,BufWritePre *.vue PrettierAsync')
 
   for k, v in pairs(default_g) do
     vim.g[k] = v
