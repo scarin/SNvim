@@ -1,14 +1,14 @@
 -- can find every server here
 -- https://github.com/williamboman/nvim-lsp-installer#available-lsps
 local lsp_table = {
+  -- ['json'] = 'jsonls',
+  ['bash'] = 'bashls',
   ['go'] = 'gopls',
-  ['rust'] = 'rust_analyzer',
+  ['javascript'] = 'tsserver',
   ['lua'] = 'sumneko_lua',
   ['python'] = 'pyright',
+  ['rust'] = 'rust_analyzer',
   ['vue'] = 'vuels',
-  ['javascript'] = 'tsserver',
-  ['bash'] = 'bashls',
-  -- ['json'] = 'jsonls',
 }
 
 return lsp_table
