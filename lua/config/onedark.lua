@@ -2,7 +2,7 @@ local vim = G_VIM
 
 require('onedark').setup {
   -- Main options --
-  style = 'warmer', -- Default theme style. Choose between 'dark', 'darker', 'cool', 'deep', 'warm', 'warmer' and 'light'
+  style = 'deep', -- Default theme style. Choose between 'dark', 'darker', 'cool', 'deep', 'warm', 'warmer' and 'light'
   -- transparent = vim.fn.exists('g:neovide') < 1 and true or false, -- Show/hide background
   transparent = vim.g.neovide == nil and true or false, -- Show/hide background
   term_colors = true, -- Change terminal color as per the selected theme style
@@ -12,7 +12,7 @@ require('onedark').setup {
   -- toggle theme style ---
   toggle_style_key = '<leader>j', -- Default keybinding to toggle
   -- toggle_style_list = { 'dark', 'darker', 'cool', 'deep', 'warm', 'warmer', 'light' }, -- List of styles to toggle between
-  toggle_style_list = { 'light', 'warm', 'deep', 'cool', 'dark', 'warmer' }, -- List of styles to toggle between
+  toggle_style_list = { 'light', 'warm', 'warmer', 'deep', 'cool', 'dark', 'darker' }, -- List of styles to toggle between
 
   -- Change code style ---
   -- Options are italic, bold, underline, none

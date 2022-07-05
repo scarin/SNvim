@@ -72,7 +72,7 @@ local function set_default_g()
       ['neovide_profiler'] = false,
       ['neovide_refresh_rate'] = 120,
       ['neovide_remember_window_size'] = true,
-      ['neovide_transparency'] = 0.9,
+      ['neovide_transparency'] = 0.98,
     }
     for k, v in pairs(g_neovide) do
       vim.g[k] = v
