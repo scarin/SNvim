@@ -50,6 +50,7 @@ local plugins = {
   { 'prettier/vim-prettier' },
   -- { 'mfussenegger/nvim-dap' },
   -- { 'akinsho/toggleterm.nvim' },
+  { 'marko-cerovac/material.nvim' },
 
   {
     'akinsho/bufferline.nvim',
