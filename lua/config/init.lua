@@ -51,7 +51,7 @@ cmd:
 :TodoTelescope
 ]]
 
-  vim.cmd 'colorscheme material'
+  -- vim.cmd 'colorscheme material'
 end
 
 do_setup()
