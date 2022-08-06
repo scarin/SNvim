@@ -3,7 +3,7 @@ local vim = G_VIM
 -- opt setting
 local function set_default_opt()
   local default_options = {
-    -- guifont        = 'Liga_SFMono_Nerd_Font:h12',
+    guifont        = 'Liga_SFMono_Nerd_Font:h11',
     backup         = false,
     clipboard      = "unnamedplus",
     cmdheight      = 1,
@@ -16,7 +16,7 @@ local function set_default_opt()
     fileencoding   = "utf-8",
     foldexpr       = "",
     foldmethod     = "manual",
-    guifont        = 'JetBrainsMono_Nerd_Font:h13',
+    -- guifont        = 'JetBrainsMono_Nerd_Font:h13',
     hidden         = true,
     hlsearch       = true,
     ignorecase     = true,
@@ -57,6 +57,8 @@ local function set_default_g()
     ['prettier#quickfix_enabled'] = 0,
   }
   vim.cmd('autocmd BufWritePre *.vue PrettierAsync')
+  vim.cmd("let g:prettier#config#print_width = '180'")
+  -- vim.cmd("let g:prettier#config#tab_width = '4'")
 
   for k, v in pairs(default_g) do
     vim.g[k] = v
