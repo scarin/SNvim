@@ -9,6 +9,8 @@ local lsp_table = {
   ['python'] = 'pyright',
   ['rust'] = 'rust_analyzer',
   ['vue'] = 'vuels',
+  -- ['cpp'] = 'clangd',
+  ['cpp'] = 'ccls',
 }
 
 return lsp_table
