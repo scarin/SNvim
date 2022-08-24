@@ -20,6 +20,7 @@ local do_setup = function()
   })
   require('todo-comments').setup()
   require('alpha').setup(require('alpha.themes.startify').config)
+  -- require('alpha').setup(require('alpha.themes.dashboard').config)
   require("Comment").setup({
     extra = {
       eol = 'gca', ---Add comment at the end of line

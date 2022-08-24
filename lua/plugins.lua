@@ -51,6 +51,7 @@ local plugins = {
   -- { 'mfussenegger/nvim-dap' },
   -- { 'akinsho/toggleterm.nvim' },
   { 'marko-cerovac/material.nvim' },
+  { 'projekt0n/github-nvim-theme' },
 
   {
     'akinsho/bufferline.nvim',

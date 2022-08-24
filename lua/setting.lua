@@ -3,7 +3,7 @@ local vim = G_VIM
 -- opt setting
 local function set_default_opt()
   local default_options = {
-    -- guifont        = 'Liga_SFMono_Nerd_Font:h12',
+    -- guifont        = 'Liga_SFMono_Nerd_Font:h11',
     backup         = false,
     clipboard      = "unnamedplus",
     cmdheight      = 1,
@@ -72,7 +72,7 @@ local function set_default_g()
       ['neovide_profiler'] = false,
       ['neovide_refresh_rate'] = 120,
       ['neovide_remember_window_size'] = true,
-      ['neovide_transparency'] = 0.98,
+      -- ['neovide_transparency'] = 0.99,
     }
     for k, v in pairs(g_neovide) do
       vim.g[k] = v
