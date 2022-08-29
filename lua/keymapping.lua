@@ -13,6 +13,9 @@ local function set_key_map()
       ['<Leader>b'] = '<Cmd>BufferLinePick<CR>',
       ['<Leader>w'] = '<Cmd>BufferLinePickClose<CR>',
       ['U'] = '<C-r>',
+      -- set the mid
+      ['mm'] = 'zz',
+
 
       ['<Leader>1'] = '<Cmd>BufferLineGoToBuffer 1<CR>',
       ['<Leader>2'] = '<Cmd>BufferLineGoToBuffer 2<CR>',

@@ -43,7 +43,7 @@ local function set_default_opt()
     undofile       = true,
     updatetime     = 300,
     writebackup    = false,
-    so             = 15,
+    -- so             = 15,
   }
 
   for k, v in pairs(default_options) do
@@ -59,6 +59,7 @@ local function set_default_g()
   }
   vim.cmd('autocmd BufWritePre *.vue PrettierAsync')
   vim.cmd("let g:prettier#config#print_width = '180'")
+  -- vim.cmd("autocmd insertleave,cursormoved * normal! zz")
   -- vim.cmd("let g:prettier#config#tab_width = '4'")
 
   for k, v in pairs(default_g) do
