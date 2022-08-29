@@ -15,8 +15,8 @@ local function set_default_opt()
     fileencoding   = "utf-8",
     foldexpr       = "",
     foldmethod     = "manual",
-    guifont        = 'JetBrainsMono_Nerd_Font:h13',
-    -- guifont        = 'Liga_SFMono_Nerd_Font:h13',
+    -- guifont        = 'JetBrainsMono_Nerd_Font:h13',
+    guifont        = 'Liga_SFMono_Nerd_Font:h13',
     hidden         = true,
     hlsearch       = true,
     ignorecase     = true,
@@ -43,6 +43,7 @@ local function set_default_opt()
     undofile       = true,
     updatetime     = 300,
     writebackup    = false,
+    so             = 15,
   }
 
   for k, v in pairs(default_options) do

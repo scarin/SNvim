@@ -24,7 +24,8 @@ local do_setup = function()
   require("Comment").setup({
     extra = {
       eol = 'gca', ---Add comment at the end of line
-    } })
+    }
+  })
 
   require('renamer').setup({
     title = '*RENAME*',
