@@ -10,7 +10,7 @@ local lsp_table = {
   ['rust'] = 'rust_analyzer',
   ['vue'] = 'vuels',
   -- ['cpp'] = 'clangd',
-  ['cpp'] = 'ccls',
+  -- ['cpp'] = 'ccls',
 }
 
 return lsp_table
