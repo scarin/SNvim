@@ -9,7 +9,7 @@ local lsp_table = {
   ['python'] = 'pyright',
   ['rust'] = 'rust_analyzer',
   ['vue'] = 'vuels',
-  ['HTML'] = 'html',
+  ['html'] = 'html',
   -- ['cpp'] = 'clangd',
   -- ['cpp'] = 'ccls',
 }
