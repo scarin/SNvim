@@ -47,7 +47,7 @@ local function set_key_map()
       ['<Leader>cp'] = '"+p',
       ['<Leader>cy'] = '"+y<CR>',
 
-      ['<Leader>;'] = '<Cmd>Alpha<CR>',
+      -- ['<Leader>;'] = '<Cmd>Alpha<CR>',
 
       ['<Leader>t'] = '<Cmd>TagbarToggle<CR>',
 

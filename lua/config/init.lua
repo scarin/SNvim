@@ -53,7 +53,7 @@ cmd:
 :TodoTelescope
 ]]
 
-  -- vim.cmd 'colorscheme material'
+  -- vim.cmd 'colorscheme dracula'
 end
 
 do_setup()
