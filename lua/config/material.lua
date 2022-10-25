@@ -9,14 +9,23 @@ require('material').setup({
     non_current_windows = false, -- Enable darker background for non-current windows
     popup_menu = false, -- Enable lighter background for the popup menu
   },
-
-  italics = {
-    comments = true, -- Enable italic comments
-    keywords = false, -- Enable italic keywords
-    functions = false, -- Enable italic functions
-    strings = false, -- Enable italic strings
-    variables = false -- Enable italic variables
+  styles = { -- Give comments style such as bold, italic, underline etc.
+    comments = { italic = true },
+    strings = { --[[ bold = true ]] },
+    keywords = { --[[ underline = true ]] },
+    functions = { --[[ bold = true, undercurl = true ]] },
+    variables = {},
+    operators = {},
+    types = {},
   },
+  --
+  -- italics = {
+  --   comments = true, -- Enable italic comments
+  --   keywords = false, -- Enable italic keywords
+  --   functions = false, -- Enable italic functions
+  --   strings = false, -- Enable italic strings
+  --   variables = false -- Enable italic variables
+  -- },
 
   contrast_filetypes = { -- Specify which filetypes get the contrasted (darker) background
     "terminal", -- Darker terminal background
@@ -63,5 +72,5 @@ require('material').setup({
   }
 })
 
-vim.g.material_style = "deep ocean" -- darker / lighter / oceanic / palenight / deep ocean
+vim.g.material_style = "darker" -- darker / lighter / oceanic / palenight / deep ocean
 vim.cmd 'colorscheme material'
