@@ -9,9 +9,9 @@ local do_setup = function()
   require('config.bufferline')
   require('config.indent_blankline')
 
-  require('config.material')
+  -- require('config.material')
   -- require('plugin_config.config.tagbar')
-  -- require('config.onedark')
+  require('config.onedark')
   -- require('plugin_config.config.rust_tools')
 
 
@@ -53,7 +53,7 @@ cmd:
 :TodoTelescope
 ]]
 
-  -- vim.cmd 'colorscheme dracula'
+  -- vim.cmd 'colorscheme solarized'
 end
 
 do_setup()

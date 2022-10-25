@@ -56,10 +56,11 @@ end
 local function set_default_g()
   local default_g = {
     ['mapleader'] = ' ',
-    ['prettier#quickfix_enabled'] = 0,
+    -- ['prettier#quickfix_enabled'] = 0,
   }
-  vim.cmd('autocmd BufWritePre *.vue PrettierAsync')
-  vim.cmd("let g:prettier#config#print_width = '180'")
+  -- vim.cmd('autocmd BufWritePre *.vue PrettierAsync')
+  -- vim.cmd("let g:prettier#config#print_width = '180'")
+  -- vim.cmd 'syntax enable'
   -- vim.cmd("autocmd insertleave,cursormoved * normal! zz")
   -- vim.cmd("let g:prettier#config#tab_width = '4'")
 
@@ -77,7 +78,7 @@ local function set_default_g()
       ['neovide_profiler']                = false,
       ['neovide_refresh_rate']            = 120,
       ['neovide_remember_window_size']    = true,
-      -- ['neovide_transparency'] = 0.99,
+      ['neovide_transparency']            = 0.99,
     }
     for k, v in pairs(g_neovide) do
       vim.g[k] = v
