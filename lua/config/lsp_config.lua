@@ -1,5 +1,19 @@
 local vim = G_VIM
 
+-- local function border(hl_name)
+--   return {
+--     { "╭", hl_name },
+--     { "─", hl_name },
+--     { "╮", hl_name },
+--     { "│", hl_name },
+--     { "╯", hl_name },
+--     { "─", hl_name },
+--     { "╰", hl_name },
+--     { "│", hl_name },
+--   }
+-- end
+
+
 local opts = { noremap = true, silent = true }
 vim.api.nvim_set_keymap('n', '<space>e', '<cmd>lua vim.diagnostic.open_float(nil, {border="single"})<CR>', opts)
 vim.api.nvim_set_keymap('n', '[d', '<cmd>lua vim.diagnostic.goto_prev()<CR>', opts)
@@ -40,17 +54,35 @@ end
 
 -- Setup lspconfig.
 local capabilities = vim.lsp.protocol.make_client_capabilities()
-capabilities.textDocument.completion.completionItem.snippetSupport = true
-capabilities.textDocument.completion.completionItem.resolveSupport = {
-  properties = {
-    "documentation",
-    "detail",
-    "additionalTextEdits",
+-- capabilities.textDocument.completion.completionItem.snippetSupport = true
+-- capabilities.textDocument.completion.completionItem.resolveSupport = {
+--   properties = {
+--     "documentation",
+--     "detail",
+--     "additionalTextEdits",
+--   },
+-- }
+
+capabilities.textDocument.completion.completionItem = {
+  documentationFormat = { "markdown", "plaintext" },
+  snippetSupport = true,
+  preselectSupport = true,
+  insertReplaceSupport = true,
+  labelDetailsSupport = true,
+  deprecatedSupport = true,
+  commitCharactersSupport = true,
+  tagSupport = { valueSet = { 1 } },
+  resolveSupport = {
+    properties = {
+      "documentation",
+      "detail",
+      "additionalTextEdits",
+    },
   },
 }
-
 -- capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
-capabilities = require('cmp_nvim_lsp').default_capabilities(vim.lsp.protocol.make_client_capabilities())
+-- capabilities = require('cmp_nvim_lsp').default_capabilities(vim.lsp.protocol.make_client_capabilities())
+capabilities = require('cmp_nvim_lsp').default_capabilities()
 
 -- LSP settings (for overriding per client)
 local handlers = {

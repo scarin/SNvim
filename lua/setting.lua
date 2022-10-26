@@ -56,13 +56,13 @@ end
 local function set_default_g()
   local default_g = {
     ['mapleader'] = ' ',
-    -- ['prettier#quickfix_enabled'] = 0,
+    ['prettier#quickfix_enabled'] = 0,
   }
-  -- vim.cmd('autocmd BufWritePre *.vue PrettierAsync')
-  -- vim.cmd("let g:prettier#config#print_width = '180'")
-  -- vim.cmd 'syntax enable'
+  vim.cmd('autocmd BufWritePre *.vue PrettierAsync')
+  vim.cmd("let g:prettier#config#print_width = '180'")
+
   -- vim.cmd("autocmd insertleave,cursormoved * normal! zz")
-  -- vim.cmd("let g:prettier#config#tab_width = '4'")
+  vim.cmd("let g:prettier#config#tab_width = '4'")
 
   for k, v in pairs(default_g) do
     vim.g[k] = v

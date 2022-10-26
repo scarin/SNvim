@@ -9,6 +9,7 @@ require('material').setup({
     non_current_windows = false, -- Enable darker background for non-current windows
     popup_menu = false, -- Enable lighter background for the popup menu
   },
+
   styles = { -- Give comments style such as bold, italic, underline etc.
     comments = { italic = true },
     strings = { --[[ bold = true ]] },

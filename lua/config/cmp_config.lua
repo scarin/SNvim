@@ -34,6 +34,19 @@ local kind_icons = {
   TypeParameter = ""
 }
 
+local function border(hl_name)
+  return {
+    { "╭", hl_name },
+    { "─", hl_name },
+    { "╮", hl_name },
+    { "│", hl_name },
+    { "╯", hl_name },
+    { "─", hl_name },
+    { "╰", hl_name },
+    { "│", hl_name },
+  }
+end
+
 cmp.setup({
   snippet = {
     expand = function(args)
@@ -42,8 +55,15 @@ cmp.setup({
     end,
   },
   window = {
-    completion = cmp.config.window.bordered(),
-    documentation = cmp.config.window.bordered(),
+    -- completion = cmp.config.window.bordered(),
+    completion = {
+      border = border "CmpBorder",
+      winhighlight = "Normal:CmpPmenu,CursorLine:PmenuSel,Search:None",
+    },
+    -- documentation = cmp.config.window.bordered(),
+    documentation = {
+      border = border "CmpDocBorder",
+    },
   },
   mapping = cmp.mapping.preset.insert({
     ['<C-b>'] = cmp.mapping.scroll_docs(-4),
@@ -76,9 +96,9 @@ cmp.setup({
     if vim.api.nvim_get_mode().mode == 'c' then
       return true
     else
-      -- return not context.in_treesitter_capture("comment")
-      -- and not context.in_syntax_group("Comment")
-      return not context.in_syntax_group("Comment")
+      return not context.in_treesitter_capture("comment")
+          and not context.in_syntax_group("Comment")
+      -- return not context.in_syntax_group("Comment")
     end
   end,
 
