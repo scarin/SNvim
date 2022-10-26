@@ -2,7 +2,7 @@ local vim = G_VIM
 
 require('onedark').setup {
   -- Main options --
-  style = 'deep', -- Default theme style. Choose between 'dark', 'darker', 'cool', 'deep', 'warm', 'warmer' and 'light'
+  style = 'warmer', -- Default theme style. Choose between 'dark', 'darker', 'cool', 'deep', 'warm', 'warmer' and 'light'
   -- transparent = vim.fn.exists('g:neovide') < 1 and true or false, -- Show/hide background
   transparent = vim.g.neovide == nil and true or false, -- Show/hide background
   term_colors = true, -- Change terminal color as per the selected theme style
@@ -19,9 +19,9 @@ require('onedark').setup {
   -- You can configure multiple style with comma seperated, For e.g., keywords = 'italic,bold'
   code_style = {
     comments = 'italic', --'italic',
-    keywords = 'italic',
-    functions = 'none',
-    strings = 'none',
+    keywords = 'bold',
+    functions = 'italic,bold',
+    strings = 'italic',
     variables = 'none'
   },
 
