@@ -44,7 +44,8 @@ local function set_default_opt()
     undofile       = true,
     updatetime     = 300,
     writebackup    = false,
-    -- so             = 15,
+    mouse          = "",
+    -- so          = 15,
   }
 
   for k, v in pairs(default_options) do
@@ -58,6 +59,7 @@ local function set_default_g()
     ['mapleader'] = ' ',
     ['prettier#quickfix_enabled'] = 0,
   }
+  -- vim.cmd('set mouse=,')
   vim.cmd('autocmd BufWritePre *.vue PrettierAsync')
   vim.cmd("let g:prettier#config#print_width = '180'")
 

@@ -53,6 +53,7 @@ local plugins = {
   { 'marko-cerovac/material.nvim' },
   { 'projekt0n/github-nvim-theme' },
   { 'shaunsingh/solarized.nvim' },
+  { 'sainnhe/gruvbox-material' },
 
   {
     'akinsho/bufferline.nvim',

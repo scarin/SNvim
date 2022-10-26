@@ -53,7 +53,7 @@ cmd:
 :TodoTelescope
 ]]
 
-  -- vim.cmd 'colorscheme solarized'
+  -- vim.cmd 'colorscheme gruvbox-material'
 end
 
 do_setup()
