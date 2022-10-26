@@ -20,7 +20,7 @@ require('onedark').setup {
   code_style = {
     comments = 'italic', --'italic',
     keywords = 'bold',
-    functions = 'italic,bold',
+    functions = 'bold',
     strings = 'italic',
     variables = 'none'
   },
