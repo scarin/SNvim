@@ -8,6 +8,7 @@ local do_setup = function()
   require('config.bubbles')
   require('config.bufferline')
   require('config.indent_blankline')
+  -- require('config.prettier')
 
   -- require('config.material')
   -- require('plugin_config.config.tagbar')

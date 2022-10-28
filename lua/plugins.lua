@@ -48,6 +48,8 @@ local plugins = {
   { 'windwp/nvim-autopairs' },
   { 'lukas-reineke/indent-blankline.nvim' },
   { 'prettier/vim-prettier' },
+  -- { 'jose-elias-alvarez/null-ls.nvim' },
+  -- { 'MunifTanjim/prettier.nvim' },
   -- { 'mfussenegger/nvim-dap' },
   -- { 'akinsho/toggleterm.nvim' },
   { 'marko-cerovac/material.nvim' },

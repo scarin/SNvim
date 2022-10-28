@@ -16,8 +16,8 @@ local function set_default_opt()
     foldexpr       = "",
     foldmethod     = "manual",
     -- guifont        = 'JetBrainsMono_Nerd_Font:h13',
-    guifont        = 'Liga_SFMono_Nerd_Font:h13',
-    -- guifont        = 'Iosevka_Nerd_Font:h13',
+    -- guifont        = 'Liga_SFMono_Nerd_Font:h13',
+    guifont        = 'Iosevka_Nerd_Font:h14',
     hidden         = true,
     hlsearch       = true,
     ignorecase     = true,
@@ -59,12 +59,11 @@ local function set_default_g()
     ['mapleader'] = ' ',
     ['prettier#quickfix_enabled'] = 0,
   }
-  -- vim.cmd('set mouse=,')
   vim.cmd('autocmd BufWritePre *.vue PrettierAsync')
-  vim.cmd("let g:prettier#config#print_width = '180'")
+  vim.cmd("let g:prettier#config#print_width = '120'")
 
   -- vim.cmd("autocmd insertleave,cursormoved * normal! zz")
-  vim.cmd("let g:prettier#config#tab_width = '4'")
+  vim.cmd("let g:prettier#config#tab_width = '2'")
 
   for k, v in pairs(default_g) do
     vim.g[k] = v
