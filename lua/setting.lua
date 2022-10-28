@@ -16,8 +16,8 @@ local function set_default_opt()
     foldexpr       = "",
     foldmethod     = "manual",
     -- guifont        = 'JetBrainsMono_Nerd_Font:h13',
-    -- guifont        = 'Liga_SFMono_Nerd_Font:h13',
-    guifont        = 'Iosevka_Nerd_Font:h14',
+    guifont        = 'Liga_SFMono_Nerd_Font:h13',
+    -- guifont        = 'Iosevka_Nerd_Font:h14',
     hidden         = true,
     hlsearch       = true,
     ignorecase     = true,
@@ -77,9 +77,11 @@ local function set_default_g()
       ['neovide_cursor_trail_length']     = 0.9,
       ['neovide_cursor_vfx_mode']         = "pixiedust",
       ['neovide_profiler']                = false,
-      ['neovide_refresh_rate']            = 120,
+      ['neovide_refresh_rate']            = 60,
+      ['neovide_refresh_rate_idle']       = 5,
       ['neovide_remember_window_size']    = true,
-      ['neovide_transparency']            = 0.99,
+      ['neovide_transparency']            = 0.9,
+      ['neovide_input_use_logo']          = false,
     }
     for k, v in pairs(g_neovide) do
       vim.g[k] = v

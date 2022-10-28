@@ -27,6 +27,7 @@ local plugins = {
   { 'wbthomason/packer.nvim' },
   { 'Mofiqul/dracula.nvim' },
   { 'navarasu/onedark.nvim' },
+  -- { 'catppuccin/nvim' },
   { 'nvim-lua/plenary.nvim' },
   { 'kyazdani42/nvim-web-devicons' },
   { 'hrsh7th/cmp-nvim-lsp' },

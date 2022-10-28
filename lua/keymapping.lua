@@ -54,8 +54,8 @@ local function set_key_map()
       ['<Leader>`'] = '<Cmd>tabnew<CR><Cmd>terminal<CR><Cmd>startinsert<CR>',
       ['<Leader>rn'] = '<Cmd>lua require("renamer").rename()<CR>',
 
-      ['<C-t>'] = '<Cmd>exe v:count1 . "ToggleTerm"<CR>',
-      ['<F12>'] = '<Cmd>lua require("plugins")<CR><Cmd>PackerSync<CR>',
+      -- ['<C-t>'] = '<Cmd>exe v:count1 . "ToggleTerm"<CR>',
+      -- ['<F12>'] = '<Cmd>lua require("plugins")<CR><Cmd>PackerSync<CR>',
 
       ['<Leader>mm'] = '<Cmd>lua require("material.functions").toggle_style()<CR>',
     },
