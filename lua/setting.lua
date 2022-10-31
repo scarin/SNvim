@@ -24,7 +24,7 @@ local function set_default_opt()
     number         = true,
     numberwidth    = 2,
     pumheight      = 10,
-    relativenumber = false,
+    relativenumber = true,
     ruler          = false,
     shiftwidth     = 2,
     showmode       = false,
@@ -80,7 +80,7 @@ local function set_default_g()
       ['neovide_refresh_rate']            = 60,
       ['neovide_refresh_rate_idle']       = 5,
       ['neovide_remember_window_size']    = true,
-      ['neovide_transparency']            = 0.9,
+      ['neovide_transparency']            = 0.95,
       ['neovide_input_use_logo']          = false,
     }
     for k, v in pairs(g_neovide) do
