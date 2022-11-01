@@ -39,7 +39,8 @@ local function set_key_map()
       ['<Leader>fg'] = '<Cmd> Telescope live_grep<CR>',
       ['<Leader>fb'] = '<Cmd> Telescope buffers<CR>',
 
-      ['<Leader>n'] = '<Cmd>NvimTreeToggle<CR>',
+      ['<Leader>t'] = '<Cmd>NvimTreeToggle<CR>',
+      ['<Leader>e'] = '<Cmd>NvimTreeFocus<CR>',
       ['<Leader>r'] = '<Cmd>NvimTreeRefresh<CR>',
 
       ['<'] = '<<^',
@@ -50,7 +51,7 @@ local function set_key_map()
 
       -- ['<Leader>;'] = '<Cmd>Alpha<CR>',
 
-      ['<Leader>t'] = '<Cmd>TagbarToggle<CR>',
+      ['<C-t>'] = '<Cmd>TagbarToggle<CR>',
 
       ['<Leader>`'] = '<Cmd>tabnew<CR><Cmd>terminal<CR><Cmd>startinsert<CR>',
       ['<Leader>rn'] = '<Cmd>lua require("renamer").rename()<CR>',
@@ -58,7 +59,7 @@ local function set_key_map()
       -- ['<C-t>'] = '<Cmd>exe v:count1 . "ToggleTerm"<CR>',
       -- ['<F12>'] = '<Cmd>lua require("plugins")<CR><Cmd>PackerSync<CR>',
 
-      ['<Leader>mm'] = '<Cmd>lua require("material.functions").toggle_style()<CR>',
+      -- ['<Leader>mm'] = '<Cmd>lua require("material.functions").toggle_style()<CR>',
     },
     ['v'] = {
       ['"'] = 'xi"<Esc>pa"<Esc>',

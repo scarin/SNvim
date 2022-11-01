@@ -25,11 +25,11 @@ packer.init(config)
 
 local plugins = {
   { 'wbthomason/packer.nvim' },
-  { 'Mofiqul/dracula.nvim' },
+  -- { 'Mofiqul/dracula.nvim' },
   { 'navarasu/onedark.nvim' },
   -- { 'catppuccin/nvim' },
   { 'nvim-lua/plenary.nvim' },
-  { 'kyazdani42/nvim-web-devicons' },
+  { 'nvim-tree/nvim-web-devicons' },
   { 'hrsh7th/cmp-nvim-lsp' },
   { 'hrsh7th/cmp-buffer' },
   { 'hrsh7th/cmp-path' },
@@ -41,7 +41,7 @@ local plugins = {
   { 'saadparwaiz1/cmp_luasnip' },
   { 'numToStr/Comment.nvim' },
   { 'preservim/tagbar' },
-  { 'simrat39/rust-tools.nvim' },
+  -- { 'simrat39/rust-tools.nvim' },
   { 'justinmk/vim-sneak' },
   { 'williamboman/nvim-lsp-installer' },
   { 'neovim/nvim-lspconfig' },
@@ -54,36 +54,34 @@ local plugins = {
   -- { 'mfussenegger/nvim-dap' },
   -- { 'akinsho/toggleterm.nvim' },
   { 'marko-cerovac/material.nvim' },
-  { 'projekt0n/github-nvim-theme' },
-  { 'shaunsingh/solarized.nvim' },
-  { 'sainnhe/gruvbox-material' },
+  -- { 'projekt0n/github-nvim-theme' },
+  -- { 'shaunsingh/solarized.nvim' },
+  -- { 'sainnhe/gruvbox-material' },
 
   {
     'akinsho/bufferline.nvim',
     tag = "v2.*",
-    requires = { { 'kyazdani42/nvim-web-devicons' } }
+    requires = { { 'nvim-tree/nvim-web-devicons' } }
   },
   {
     'nvim-lualine/lualine.nvim',
-    requires = { { 'kyazdani42/nvim-web-devicons', opt = true } }
+    requires = { { 'nvim-tree/nvim-web-devicons', opt = true } }
   },
   {
     'nvim-treesitter/nvim-treesitter',
     run = function() require('nvim-treesitter.install').update({ with_sync = true }) end,
-    -- run = ':TSUpdate'
   },
   {
     'nvim-telescope/telescope.nvim',
     requires = { { 'nvim-lua/plenary.nvim' } }
   },
   {
-    'kyazdani42/nvim-tree.lua',
-    --   'nvim-tree/nvim-tree.lua',
-    requires = { { 'kyazdani42/nvim-web-devicons' } }
+    'nvim-tree/nvim-tree.lua',
+    requires = { { 'nvim-tree/nvim-web-devicons' } }
   },
   {
     'goolord/alpha-nvim',
-    requires = { { 'kyazdani42/nvim-web-devicons' } }
+    requires = { { 'nvim-tree/nvim-web-devicons' } }
   },
   {
     'filipdutescu/renamer.nvim',
