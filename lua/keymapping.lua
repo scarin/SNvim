@@ -36,7 +36,9 @@ local function set_key_map()
       ['<C-k>'] = '<C-w>k',
       ['<C-l>'] = '<C-w>l',
 
-      ['<Leader>ff'] = '<cmd>lua require(\'telescope.builtin\').find_files()<CR>',
+      ['<Leader>ff'] = '<Cmd> Telescope find_files<CR>',
+      ['<Leader>fg'] = '<Cmd> Telescope live_grep<CR>',
+      ['<Leader>fb'] = '<Cmd> Telescope buffers<CR>',
 
       ['<Leader>n'] = '<Cmd>NvimTreeToggle<CR>',
       ['<Leader>r'] = '<Cmd>NvimTreeRefresh<CR>',
