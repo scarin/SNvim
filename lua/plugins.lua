@@ -70,7 +70,7 @@ local plugins = {
   {
     'nvim-treesitter/nvim-treesitter',
     run = function() require('nvim-treesitter.install').update({ with_sync = true }) end,
-    --run = ':TSUpdate'
+    -- run = ':TSUpdate'
   },
   {
     'nvim-telescope/telescope.nvim',
@@ -78,6 +78,7 @@ local plugins = {
   },
   {
     'kyazdani42/nvim-tree.lua',
+    --   'nvim-tree/nvim-tree.lua',
     requires = { { 'kyazdani42/nvim-web-devicons' } }
   },
   {

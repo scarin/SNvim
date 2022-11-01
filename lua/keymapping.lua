@@ -10,12 +10,11 @@ local function set_key_map()
       ['<Leader>h'] = '<Cmd>BufferLineCyclePrev<CR>',
       ['<Tab>'] = '<Cmd>BufferLineCycleNext<CR>',
       ['<S-Tab>'] = '<Cmd>BufferLineCyclePrev<CR>',
-      ['<Leader>b'] = '<Cmd>BufferLinePick<CR>',
+      -- ['<Leader>b'] = '<Cmd>BufferLinePick<CR>',
       ['<Leader>w'] = '<Cmd>BufferLinePickClose<CR>',
       ['U'] = '<C-r>',
       -- set the mid
-      ['mm'] = 'zz',
-
+      -- ['mm'] = 'zz',
 
       ['<Leader>1'] = '<Cmd>BufferLineGoToBuffer 1<CR>',
       ['<Leader>2'] = '<Cmd>BufferLineGoToBuffer 2<CR>',
