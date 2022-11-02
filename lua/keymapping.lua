@@ -40,7 +40,7 @@ local function set_key_map()
       ['<Leader>fb'] = '<Cmd> Telescope buffers<CR>',
 
       ['<Leader>t'] = '<Cmd>NvimTreeToggle<CR>',
-      ['<Leader>e'] = '<Cmd>NvimTreeFocus<CR>',
+      -- ['<Leader>e'] = '<Cmd>NvimTreeFocus<CR>',
       ['<Leader>r'] = '<Cmd>NvimTreeRefresh<CR>',
 
       ['<'] = '<<^',
@@ -54,7 +54,7 @@ local function set_key_map()
       ['<C-t>'] = '<Cmd>TagbarToggle<CR>',
 
       ['<Leader>`'] = '<Cmd>tabnew<CR><Cmd>terminal<CR><Cmd>startinsert<CR>',
-      ['<Leader>rn'] = '<Cmd>lua require("renamer").rename()<CR>',
+      -- ['<Leader>rn'] = '<Cmd>lua require("renamer").rename()<CR>',
 
       -- ['<C-t>'] = '<Cmd>exe v:count1 . "ToggleTerm"<CR>',
       -- ['<F12>'] = '<Cmd>lua require("plugins")<CR><Cmd>PackerSync<CR>',

@@ -83,11 +83,11 @@ local plugins = {
     'goolord/alpha-nvim',
     requires = { { 'nvim-tree/nvim-web-devicons' } }
   },
-  {
-    'filipdutescu/renamer.nvim',
-    branch = 'master',
-    requires = { { 'nvim-lua/plenary.nvim' } }
-  },
+  -- {
+  --   'filipdutescu/renamer.nvim',
+  --   branch = 'master',
+  --   requires = { { 'nvim-lua/plenary.nvim' } }
+  -- },
 }
 packer.startup({ function(use)
   for _, v in pairs(plugins) do

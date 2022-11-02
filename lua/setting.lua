@@ -15,7 +15,7 @@ local function set_default_opt()
     fileencoding   = "utf-8",
     foldexpr       = "",
     foldmethod     = "manual",
-    guifont        = 'JetBrainsMono_Nerd_Font:h14',
+    guifont        = 'JetBrainsMono_Nerd_Font:h13',
     -- guifont        = 'Liga_SFMono_Nerd_Font:h13',
     -- guifont        = 'Iosevka_Nerd_Font:h14',
     hidden         = true,
@@ -24,7 +24,7 @@ local function set_default_opt()
     number         = true,
     numberwidth    = 2,
     pumheight      = 10,
-    relativenumber = true,
+    relativenumber = false,
     ruler          = false,
     shiftwidth     = 2,
     showmode       = false,
@@ -59,6 +59,7 @@ local function set_default_g()
     ['mapleader'] = ' ',
     ['prettier#quickfix_enabled'] = 0,
   }
+  -- vim.cmd('autocmd BufEnter, BufWinEnter, BufLeave, BufWinLeave *.lua TSToggle highlight')
   vim.cmd('autocmd BufWritePre *.vue PrettierAsync')
   vim.cmd("let g:prettier#config#print_width = '120'")
 

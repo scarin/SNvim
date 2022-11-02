@@ -1,4 +1,4 @@
--- can find every server here
+-- can find all server here
 -- https://github.com/williamboman/nvim-lsp-installer#available-lsps
 local lsp_table = {
   ['json'] = 'jsonls',

@@ -4,17 +4,16 @@ local do_setup = function()
   require('config.cmp_config')
   require('config.nvimtree')
   require('config.treesitter')
-  -- require('config.lualine')
+  require('config.lualine')
   require('config.bubbles')
   require('config.bufferline')
   require('config.indent_blankline')
-  -- require('config.prettier')
 
   -- require('config.material')
   -- require('plugin_config.config.tagbar')
   require('config.onedark')
   -- require('plugin_config.config.rust_tools')
-
+  -- require('mason').setup()
 
   require('nvim-autopairs').setup({
     disable_in_visualblock = true
@@ -28,11 +27,11 @@ local do_setup = function()
     }
   })
 
-  require('renamer').setup({
-    title = '*RENAME*',
-    min_width = 30,
-    max_width = 50
-  })
+  -- require('renamer').setup({
+  --   title = '*RENAME*',
+  --   min_width = 30,
+  --   max_width = 60
+  -- })
 
   --[[
 eg:

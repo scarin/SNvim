@@ -5,9 +5,6 @@ local function tree_setup()
 
   for k, _ in pairs(require('config.lsp_table')) do
     table.insert(servers, k)
-    -- if servers == 'lua' then
-    --   vim.cmd('TSToggle highlight')
-    -- end
   end
 
   tree.setup {
