@@ -70,6 +70,7 @@ require('material').setup({
     hop = true,
     indent_blankline = true,
     nvim_illuminate = true,
+    -- lualine = false,
   }
 })
 
