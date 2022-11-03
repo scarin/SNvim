@@ -1,6 +1,7 @@
 local do_setup = function()
   require('config.lsp_installer')
   require('config.lsp_config')
+
   require('config.cmp_config')
   require('config.nvimtree')
   require('config.treesitter')
@@ -26,12 +27,6 @@ local do_setup = function()
       eol = 'gca', ---Add comment at the end of line
     }
   })
-
-  -- require('renamer').setup({
-  --   title = '*RENAME*',
-  --   min_width = 30,
-  --   max_width = 60
-  -- })
 
   --[[
 eg:

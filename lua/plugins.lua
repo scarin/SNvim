@@ -41,7 +41,6 @@ local plugins = {
   { 'saadparwaiz1/cmp_luasnip' },
   { 'numToStr/Comment.nvim' },
   { 'preservim/tagbar' },
-  -- { 'simrat39/rust-tools.nvim' },
   { 'justinmk/vim-sneak' },
   { 'williamboman/nvim-lsp-installer' },
   { 'neovim/nvim-lspconfig' },
@@ -49,14 +48,7 @@ local plugins = {
   { 'windwp/nvim-autopairs' },
   { 'lukas-reineke/indent-blankline.nvim' },
   { 'prettier/vim-prettier' },
-  -- { 'jose-elias-alvarez/null-ls.nvim' },
-  -- { 'MunifTanjim/prettier.nvim' },
-  -- { 'mfussenegger/nvim-dap' },
-  -- { 'akinsho/toggleterm.nvim' },
   { 'marko-cerovac/material.nvim' },
-  -- { 'projekt0n/github-nvim-theme' },
-  -- { 'shaunsingh/solarized.nvim' },
-  -- { 'sainnhe/gruvbox-material' },
 
   {
     'akinsho/bufferline.nvim',
@@ -83,11 +75,6 @@ local plugins = {
     'goolord/alpha-nvim',
     requires = { { 'nvim-tree/nvim-web-devicons' } }
   },
-  -- {
-  --   'filipdutescu/renamer.nvim',
-  --   branch = 'master',
-  --   requires = { { 'nvim-lua/plenary.nvim' } }
-  -- },
 }
 packer.startup({ function(use)
   for _, v in pairs(plugins) do
