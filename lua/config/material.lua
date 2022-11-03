@@ -12,9 +12,9 @@ require('material').setup({
 
   styles = { -- Give comments style such as bold, italic, underline etc.
     comments = { italic = true },
-    strings = { --[[ bold = true ]] },
+    strings = { italic = true },
     keywords = { --[[ underline = true ]] },
-    functions = { --[[ bold = true, undercurl = true ]] },
+    functions = { bold = true },
     variables = {},
     operators = {},
     types = {},

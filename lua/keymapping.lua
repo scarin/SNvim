@@ -59,7 +59,7 @@ local function set_key_map()
       -- ['<C-t>'] = '<Cmd>exe v:count1 . "ToggleTerm"<CR>',
       -- ['<F12>'] = '<Cmd>lua require("plugins")<CR><Cmd>PackerSync<CR>',
 
-      -- ['<Leader>mm'] = '<Cmd>lua require("material.functions").toggle_style()<CR>',
+      ['<Leader>j'] = '<Cmd>lua require("material.functions").toggle_style()<CR>',
     },
     ['v'] = {
       ['"'] = 'xi"<Esc>pa"<Esc>',

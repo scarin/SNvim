@@ -95,7 +95,9 @@ local handlers = {
 
 local servers = {}
 for _, v in pairs(require('config.lsp_table')) do
-  table.insert(servers, v)
+  if v ~= "jsonls" then
+    table.insert(servers, v)
+  end
 end
 
 for _, server in pairs(servers) do
