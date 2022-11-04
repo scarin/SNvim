@@ -25,9 +25,7 @@ packer.init(config)
 
 local plugins = {
   { 'wbthomason/packer.nvim' },
-  -- { 'Mofiqul/dracula.nvim' },
   { 'navarasu/onedark.nvim' },
-  -- { 'catppuccin/nvim' },
   { 'nvim-lua/plenary.nvim' },
   { 'nvim-tree/nvim-web-devicons' },
   { 'hrsh7th/cmp-nvim-lsp' },
@@ -76,6 +74,7 @@ local plugins = {
     requires = { { 'nvim-tree/nvim-web-devicons' } }
   },
 }
+
 packer.startup({ function(use)
   for _, v in pairs(plugins) do
     use(v)

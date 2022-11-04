@@ -24,7 +24,7 @@ require('bufferline').setup {
     tab_size = 20,
     diagnostics = false, --"nvim_lsp",
     diagnostics_update_in_insert = false,
-    diagnostics_indicator = function(count, level, diagnostics_dict, context)
+    diagnostics_indicator = function(count, _, _, _ --[[ level, diagnostics_dict, context ]])
       return "(" .. count .. ")"
     end,
     offsets = { { filetype = "NvimTree", text = "File Explorer", text_align = "left", padding = 1 } },

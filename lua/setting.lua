@@ -1,4 +1,4 @@
-local vim = G_VIM
+local vim = vim
 
 -- opt setting
 local function set_default_opt()
@@ -45,31 +45,16 @@ local function set_default_opt()
     updatetime     = 300,
     writebackup    = false,
     mouse          = "",
-    -- so          = 15,
   }
 
   for k, v in pairs(default_options) do
     vim.opt[k] = v
   end
+
+  vim.g['mapleader'] = ' '
 end
 
--- g setting
-local function set_default_g()
-  local default_g = {
-    ['mapleader'] = ' ',
-    ['prettier#quickfix_enabled'] = 0,
-  }
-  -- vim.cmd('autocmd BufEnter, BufWinEnter, BufLeave, BufWinLeave *.lua TSToggle highlight')
-  vim.cmd('autocmd BufWritePre *.vue PrettierAsync')
-  vim.cmd("let g:prettier#config#print_width = '120'")
-
-  -- vim.cmd("autocmd insertleave,cursormoved * normal! zz")
-  vim.cmd("let g:prettier#config#tab_width = '2'")
-
-  for k, v in pairs(default_g) do
-    vim.g[k] = v
-  end
-
+local function set_neovide_g()
   if vim.g.neovide == nil then
     vim.cmd('autocmd vimenter * hi Normal guibg=NONE ctermbg=NONE')
   else
@@ -81,7 +66,7 @@ local function set_default_g()
       ['neovide_refresh_rate']            = 60,
       ['neovide_refresh_rate_idle']       = 5,
       ['neovide_remember_window_size']    = true,
-      ['neovide_transparency']            = 0.95,
+      ['neovide_transparency']            = 0.99,
       ['neovide_input_use_logo']          = false,
     }
     for k, v in pairs(g_neovide) do
@@ -92,7 +77,7 @@ end
 
 local function set_default()
   set_default_opt()
-  set_default_g()
+  set_neovide_g()
 end
 
 set_default()

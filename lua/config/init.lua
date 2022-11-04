@@ -1,20 +1,16 @@
-local do_setup = function()
+local do_plugin_setup = function()
   require('config.lsp_installer')
   require('config.lsp_config')
-
   require('config.cmp_config')
+
   require('config.nvimtree')
   require('config.treesitter')
   require('config.bufferline')
   require('config.indent_blankline')
-
   require('config.bubbles')
   require('config.material')
   -- require('config.lualine_conf')
-  -- require('plugin_config.config.tagbar')
   -- require('config.onedark')
-  -- require('plugin_config.config.rust_tools')
-  -- require('mason').setup()
 
   require('nvim-autopairs').setup({
     disable_in_visualblock = true
@@ -22,13 +18,12 @@ local do_setup = function()
   require('todo-comments').setup()
   require('alpha').setup(require('alpha.themes.startify').config)
   -- require('alpha').setup(require('alpha.themes.dashboard').config)
-  require("Comment").setup({
-    extra = {
-      eol = 'gca', ---Add comment at the end of line
-    }
-  })
+  require('config.comment')
+  require('config.prettier')
+end
+do_plugin_setup()
 
-  --[[
+--[[
 eg:
 PERF:
 HACK:
@@ -47,8 +42,3 @@ cmd:
 :TodoTrouble
 :TodoTelescope
 ]]
-
-  -- vim.cmd 'colorscheme gruvbox-material'
-end
-
-do_setup()
