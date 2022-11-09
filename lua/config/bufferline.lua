@@ -1,5 +1,3 @@
-local vim = G_VIM
-
 require('bufferline').setup {
   options = {
     mode = "buffers",

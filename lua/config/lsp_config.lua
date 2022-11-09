@@ -1,18 +1,4 @@
-local vim = G_VIM
-
--- local function border(hl_name)
---   return {
---     { "╭", hl_name },
---     { "─", hl_name },
---     { "╮", hl_name },
---     { "│", hl_name },
---     { "╯", hl_name },
---     { "─", hl_name },
---     { "╰", hl_name },
---     { "│", hl_name },
---   }
--- end
-
+local vim = vim
 
 local opts = { noremap = true, silent = true }
 vim.api.nvim_set_keymap('n', '<space>e', '<cmd>lua vim.diagnostic.open_float(nil, {border="single"})<CR>', opts)
@@ -43,12 +29,7 @@ local on_attach = function(_, bufnr)
   vim.api.nvim_buf_set_keymap(bufnr, 'n', 'gr', '<cmd>lua vim.lsp.buf.references()<CR>', opts)
   vim.api.nvim_buf_set_keymap(bufnr, 'n', '<Leader>f', '<cmd>lua vim.lsp.buf.format { async = true }<CR>', opts)
 
-  -- vim.api.nvim_buf_set_keymap(bufnr, 'n', '<Leader>s', '<cmd>lua vim.lsp.buf.document_symbol()<CR><cmd>vertical botright copen 70<CR>', opts)
-
   vim.cmd('autocmd BufWritePre <buffer> lua vim.lsp.buf.formatting_sync()')
-  -- vim.cmd('autocmd BufWritePre <buffer> lua vim.lsp.buf.format { async = true }')
-  -- vim.cmd('autocmd BufWritePre <buffer> lua vim.lsp.buf.formatting_seq_sync()')
-
   vim.cmd('autocmd CursorHold  <buffer> lua vim.lsp.buf.document_highlight()')
   vim.cmd('autocmd CursorHoldI <buffer> lua vim.lsp.buf.document_highlight()')
   vim.cmd('autocmd CursorMoved <buffer> lua vim.lsp.buf.clear_references()')
@@ -56,14 +37,6 @@ end
 
 -- Setup lspconfig.
 local capabilities = vim.lsp.protocol.make_client_capabilities()
--- capabilities.textDocument.completion.completionItem.snippetSupport = true
--- capabilities.textDocument.completion.completionItem.resolveSupport = {
---   properties = {
---     "documentation",
---     "detail",
---     "additionalTextEdits",
---   },
--- }
 
 capabilities.textDocument.completion.completionItem = {
   documentationFormat = { "markdown", "plaintext" },
@@ -82,9 +55,6 @@ capabilities.textDocument.completion.completionItem = {
     },
   },
 }
---
--- capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
--- capabilities = require('cmp_nvim_lsp').default_capabilities(vim.lsp.protocol.make_client_capabilities())
 capabilities = require('cmp_nvim_lsp').default_capabilities()
 
 -- LSP settings (for overriding per client)
@@ -93,13 +63,7 @@ local handlers = {
   ["textDocument/signatureHelp"] = vim.lsp.with(vim.lsp.handlers.signature_help, { border = "rounded" }),
 }
 
-local servers = {}
-for _, v in pairs(require('config.lsp_table')) do
-  if v ~= "jsonls" then
-    table.insert(servers, v)
-  end
-end
-
+local servers = G_LANGUAGES_SERVER
 for _, server in pairs(servers) do
   require('lspconfig')[server].setup {
     on_attach = on_attach,
@@ -120,7 +84,6 @@ vim.diagnostic.config({
   underline = true,
   update_in_insert = false,
   severity_sort = true,
-  -- float = "bold",
 })
 
 for type, icon in pairs(signs) do

@@ -1,15 +1,9 @@
-local vim = G_VIM
-
 local function lsp_setup()
   local lsp = require('nvim-lsp-installer')
 
-  local servers = {}
-  for _, v in pairs(require('config.lsp_table')) do
-    table.insert(servers, v)
-  end
+  local servers = G_LANGUAGES_SERVER
 
   lsp.setup({
-    -- ensure_installed = { "sumneko_lua", "gopls", "rust_analyzer", "pyright" },
     ensure_installed = servers,
     automatic_installation = true,
 

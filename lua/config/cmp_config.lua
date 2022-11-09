@@ -1,4 +1,4 @@
-local vim = G_VIM
+local vim = vim
 local cmp = require('cmp')
 
 local kind_icons = {

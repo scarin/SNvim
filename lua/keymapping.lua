@@ -1,4 +1,4 @@
-local vim = G_VIM
+local vim = vim
 
 local function set_key_map()
   local default_opts = { noremap = true, silent = true }

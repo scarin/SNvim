@@ -1,4 +1,4 @@
-local vim = G_VIM
+local vim = vim
 vim.cmd [[packadd packer.nvim]]
 
 local present, packer = pcall(require, "packer")
@@ -45,7 +45,7 @@ local plugins = {
   { 'folke/todo-comments.nvim' },
   { 'windwp/nvim-autopairs' },
   { 'lukas-reineke/indent-blankline.nvim' },
-  { 'prettier/vim-prettier' },
+  -- { 'prettier/vim-prettier' },
   { 'marko-cerovac/material.nvim' },
 
   {
