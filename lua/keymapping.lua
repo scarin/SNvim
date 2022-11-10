@@ -13,6 +13,7 @@ local function set_key_map()
       ['<S-Tab>'] = '<Cmd>BufferLineCyclePrev<CR>',
       ['<Leader>w'] = '<Cmd>BufferLinePickClose<CR>',
       ['U'] = '<C-r>',
+      ['G'] = 'Gzz',
 
       ['<Leader>1'] = '<Cmd>BufferLineGoToBuffer 1<CR>',
       ['<Leader>2'] = '<Cmd>BufferLineGoToBuffer 2<CR>',
