@@ -25,7 +25,7 @@ packer.init(config)
 
 local plugins = {
   { 'wbthomason/packer.nvim' },
-  { 'navarasu/onedark.nvim' },
+  -- { 'navarasu/onedark.nvim' },
   { 'nvim-lua/plenary.nvim' },
   { 'nvim-tree/nvim-web-devicons' },
   { 'hrsh7th/cmp-nvim-lsp' },
@@ -45,7 +45,7 @@ local plugins = {
   { 'folke/todo-comments.nvim' },
   { 'windwp/nvim-autopairs' },
   { 'lukas-reineke/indent-blankline.nvim' },
-  -- { 'prettier/vim-prettier' },
+  { 'prettier/vim-prettier' },
   { 'marko-cerovac/material.nvim' },
 
   {
@@ -69,10 +69,10 @@ local plugins = {
     'nvim-tree/nvim-tree.lua',
     requires = { { 'nvim-tree/nvim-web-devicons' } }
   },
-  {
-    'goolord/alpha-nvim',
-    requires = { { 'nvim-tree/nvim-web-devicons' } }
-  },
+  -- {
+  --   'goolord/alpha-nvim',
+  --   requires = { { 'nvim-tree/nvim-web-devicons' } }
+  -- },
 }
 
 packer.startup({ function(use)
