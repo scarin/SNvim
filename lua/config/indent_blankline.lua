@@ -1,4 +1,3 @@
-local indent = require("indent_blankline")
 local options = {
   indentLine_enabled = 1,
   -- char = "▏",
@@ -19,4 +18,4 @@ local options = {
   show_first_indent_level = false,
 }
 
-indent.setup(options)
+require("indent_blankline").setup(options)

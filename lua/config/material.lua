@@ -1,5 +1,4 @@
 require('material').setup({
-
   contrast = {
     sidebars = false, -- Enable contrast for sidebar-like windows ( for example Nvim-Tree )
     floating_windows = false, -- Enable contrast for floating windows
@@ -19,14 +18,6 @@ require('material').setup({
     operators = {},
     types = {},
   },
-  --
-  -- italics = {
-  --   comments = true, -- Enable italic comments
-  --   keywords = false, -- Enable italic keywords
-  --   functions = false, -- Enable italic functions
-  --   strings = false, -- Enable italic strings
-  --   variables = false -- Enable italic variables
-  -- },
 
   contrast_filetypes = { -- Specify which filetypes get the contrasted (darker) background
     "terminal", -- Darker terminal background
@@ -70,7 +61,6 @@ require('material').setup({
     hop = true,
     indent_blankline = true,
     nvim_illuminate = true,
-    -- lualine = false,
   }
 })
 

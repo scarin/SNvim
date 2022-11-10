@@ -1,5 +1,3 @@
-local vim = vim
-
 local function set_prettier_g()
   local prettier_g = {
     -- ['prettier#quickfix_enabled'] = 0,
