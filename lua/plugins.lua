@@ -51,28 +51,15 @@ local plugins = {
   {
     'akinsho/bufferline.nvim',
     tag = "v2.*",
-    requires = { { 'nvim-tree/nvim-web-devicons' } }
   },
-  {
-    'nvim-lualine/lualine.nvim',
-    requires = { { 'nvim-tree/nvim-web-devicons', opt = true } }
-  },
+  { 'nvim-lualine/lualine.nvim' },
   {
     'nvim-treesitter/nvim-treesitter',
     run = function() require('nvim-treesitter.install').update({ with_sync = true }) end,
   },
-  {
-    'nvim-telescope/telescope.nvim',
-    requires = { { 'nvim-lua/plenary.nvim' } }
-  },
-  {
-    'nvim-tree/nvim-tree.lua',
-    requires = { { 'nvim-tree/nvim-web-devicons' } }
-  },
-  -- {
-  --   'goolord/alpha-nvim',
-  --   requires = { { 'nvim-tree/nvim-web-devicons' } }
-  -- },
+  { 'nvim-telescope/telescope.nvim' },
+  { 'nvim-tree/nvim-tree.lua' },
+  { 'goolord/alpha-nvim' },
 }
 
 packer.startup({ function(use)

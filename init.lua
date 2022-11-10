@@ -21,8 +21,6 @@ G_LANGUAGES_SERVER = {
   'vuels', -- vue
 }
 
-vim.cmd 'colorscheme default'
-
 require('setting')
 require('keymapping')
 require('config')
