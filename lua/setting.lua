@@ -67,7 +67,7 @@ local function set_neovide_g()
       ['neovide_refresh_rate']            = 120,
       ['neovide_refresh_rate_idle']       = 5,
       ['neovide_remember_window_size']    = true,
-      ['neovide_transparency']            = 0.85,
+      ['neovide_transparency']            = 0.98,
       ['neovide_input_use_logo']          = false,
       -- ['neovide_floating_blur_amount_x']  = 2.0,
       -- ['neovide_floating_blur_amount_y']  = 2.0,
