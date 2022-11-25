@@ -16,7 +16,7 @@ local function set_default_opt()
     foldexpr       = "",
     foldmethod     = "manual",
     -- guifont        = 'JetBrainsMono_Nerd_Font:h12',
-    guifont        = 'Liga_SFMono_Nerd_Font:h13',
+    guifont        = 'Liga_SFMono_Nerd_Font:h12',
     -- guifont        = 'RobotoMono_Nerd_Font:h13',
     -- guifont        = 'Iosevka_Nerd_Font:h14',
     hidden         = true,
