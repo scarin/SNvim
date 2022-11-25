@@ -17,7 +17,7 @@ local function set_default_opt()
     foldmethod     = "manual",
     -- guifont        = 'JetBrainsMono_Nerd_Font:h12',
     guifont        = 'Liga_SFMono_Nerd_Font:h13',
-    -- guifont        = 'RobotoMono_Nerd_Font:h12',
+    -- guifont        = 'RobotoMono_Nerd_Font:h13',
     -- guifont        = 'Iosevka_Nerd_Font:h14',
     hidden         = true,
     hlsearch       = true,
@@ -60,14 +60,14 @@ local function set_neovide_g()
     vim.cmd('autocmd vimenter * hi Normal guibg=NONE ctermbg=NONE')
   else
     local g_neovide = {
-      ['neovide_cursor_animation_length'] = 0.03,
+      ['neovide_cursor_animation_length'] = 0.02,
       ['neovide_cursor_trail_length']     = 0.9,
       ['neovide_cursor_vfx_mode']         = "pixiedust",
       ['neovide_profiler']                = false,
       ['neovide_refresh_rate']            = 120,
       ['neovide_refresh_rate_idle']       = 5,
       ['neovide_remember_window_size']    = true,
-      ['neovide_transparency']            = 0.85,
+      ['neovide_transparency']            = 0.98,
       ['neovide_input_use_logo']          = false,
       -- ['neovide_floating_blur_amount_x']  = 2.0,
       -- ['neovide_floating_blur_amount_y']  = 2.0,

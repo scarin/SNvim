@@ -8,7 +8,7 @@ local do_plugin_setup = function()
   require('config.bufferline')
   require('config.indent_blankline')
   require('config.bubbles')
-  require('config.material')
+  -- require('config.material')
   -- require('config.lualine_conf')
   -- require('config.onedark')
 
@@ -21,6 +21,7 @@ local do_plugin_setup = function()
   require('config.comment')
   require('config.prettier')
 end
+
 do_plugin_setup()
 
 --[[

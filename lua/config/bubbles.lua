@@ -34,7 +34,8 @@ local bubbles_theme = {
 
 require('lualine').setup {
   options = {
-    theme = bubbles_theme,
+    -- theme = bubbles_theme,
+    theme = 'dracula-nvim',
     component_separators = '|',
     section_separators = { left = '', right = '' },
   },
@@ -43,7 +44,7 @@ require('lualine').setup {
       { 'mode', separator = { left = '' }, right_padding = 2 },
     },
     lualine_b = { 'filename', 'branch' }, --, 'branch'
-    lualine_c = { 'diff', 'diagnostics' }, --  'fileformat'
+    lualine_c = { 'diagnostics' }, --  'fileformat'
     lualine_x = {},
     lualine_y = { 'filetype', 'progress' },
     lualine_z = {
