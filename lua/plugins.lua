@@ -60,7 +60,6 @@ local plugins = {
   { 'nvim-telescope/telescope.nvim' },
   { 'nvim-tree/nvim-tree.lua' },
   { 'goolord/alpha-nvim' },
-  { 'Mofiqul/dracula.nvim' },
 }
 
 packer.startup({ function(use)

@@ -15,7 +15,7 @@ local function lsp_setup()
       }
     },
 
-    log_level = vim.log.levels.INFO,
+    log_level = vim.log.levels.ERROR,
 
     max_concurrent_installers = 16,
   })

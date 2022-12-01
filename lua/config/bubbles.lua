@@ -34,8 +34,8 @@ local bubbles_theme = {
 
 require('lualine').setup {
   options = {
-    -- theme = bubbles_theme,
-    theme = 'dracula-nvim',
+    theme = bubbles_theme,
+    -- theme = 'dracula-nvim',
     component_separators = '|',
     section_separators = { left = '', right = '' },
   },

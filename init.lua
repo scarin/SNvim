@@ -21,12 +21,6 @@ G_LANGUAGES_SERVER = {
   'vuels', -- vue
 }
 
-local dracula = require('dracula')
-dracula.setup({
-  italic_comment = true,
-})
-vim.cmd [[colorscheme dracula]]
-
 require('setting')
 require('keymapping')
 require('config')

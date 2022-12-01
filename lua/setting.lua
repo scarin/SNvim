@@ -16,7 +16,7 @@ local function set_default_opt()
     foldexpr       = "",
     foldmethod     = "manual",
     -- guifont        = 'JetBrainsMono_Nerd_Font:h12',
-    guifont        = 'Liga_SFMono_Nerd_Font:h12',
+    guifont        = 'Liga_SFMono_Nerd_Font:h13',
     -- guifont        = 'RobotoMono_Nerd_Font:h13',
     -- guifont        = 'Iosevka_Nerd_Font:h14',
     hidden         = true,
@@ -86,3 +86,44 @@ local function set_default()
 end
 
 set_default()
+
+vim.cmd [[
+  let g:user_emmet_settings = {
+  \ 'wxss': {
+  \   'extends': 'css',
+  \ },
+  \ 'wxml': {
+  \   'extends': 'html',
+  \   'aliases': {
+  \     'div': 'view',
+  \     'span': 'text',
+  \   },
+  \  'default_attributes': {
+  \     'block': [{'wx:for-items': '{{list}}','wx:for-item': '{{item}}'}],
+  \     'navigator': [{'url': '', 'redirect': 'false'}],
+  \     'scroll-view': [{'bindscroll': ''}],
+  \     'swiper': [{'autoplay': 'false', 'current': '0'}],
+  \     'icon': [{'type': 'success', 'size': '23'}],
+  \     'progress': [{'precent': '0'}],
+  \     'button': [{'size': 'default'}],
+  \     'checkbox-group': [{'bindchange': ''}],
+  \     'checkbox': [{'value': '', 'checked': ''}],
+  \     'form': [{'bindsubmit': ''}],
+  \     'input': [{'type': 'text'}],
+  \     'label': [{'for': ''}],
+  \     'picker': [{'bindchange': ''}],
+  \     'radio-group': [{'bindchange': ''}],
+  \     'radio': [{'checked': ''}],
+  \     'switch': [{'checked': ''}],
+  \     'slider': [{'value': ''}],
+  \     'action-sheet': [{'bindchange': ''}],
+  \     'modal': [{'title': ''}],
+  \     'loading': [{'bindchange': ''}],
+  \     'toast': [{'duration': '1500'}],
+  \     'audio': [{'src': ''}],
+  \     'video': [{'src': ''}],
+  \     'image': [{'src': '', 'mode': 'scaleToFill'}],
+  \   }
+  \ },
+  \}
+]]
