@@ -64,15 +64,15 @@ local function set_neovide_g()
       ['neovide_cursor_trail_length']     = 0.9,
       ['neovide_cursor_vfx_mode']         = "pixiedust",
       ['neovide_profiler']                = false,
-      ['neovide_refresh_rate']            = 120,
+      ['neovide_refresh_rate']            = 60,
       ['neovide_refresh_rate_idle']       = 5,
       ['neovide_remember_window_size']    = true,
-      ['neovide_transparency']            = 0.98,
+      ['neovide_transparency']            = 0.95,
       ['neovide_input_use_logo']          = false,
       -- ['neovide_floating_blur_amount_x']  = 2.0,
       -- ['neovide_floating_blur_amount_y']  = 2.0,
       -- ['transparency']                    = 0.8,
-      -- ['neovide_background_color']        = "grey",
+      -- ['neovide_background_color']        = "deep",
     }
     for k, v in pairs(g_neovide) do
       vim.g[k] = v
@@ -86,44 +86,3 @@ local function set_default()
 end
 
 set_default()
-
-vim.cmd [[
-  let g:user_emmet_settings = {
-  \ 'wxss': {
-  \   'extends': 'css',
-  \ },
-  \ 'wxml': {
-  \   'extends': 'html',
-  \   'aliases': {
-  \     'div': 'view',
-  \     'span': 'text',
-  \   },
-  \  'default_attributes': {
-  \     'block': [{'wx:for-items': '{{list}}','wx:for-item': '{{item}}'}],
-  \     'navigator': [{'url': '', 'redirect': 'false'}],
-  \     'scroll-view': [{'bindscroll': ''}],
-  \     'swiper': [{'autoplay': 'false', 'current': '0'}],
-  \     'icon': [{'type': 'success', 'size': '23'}],
-  \     'progress': [{'precent': '0'}],
-  \     'button': [{'size': 'default'}],
-  \     'checkbox-group': [{'bindchange': ''}],
-  \     'checkbox': [{'value': '', 'checked': ''}],
-  \     'form': [{'bindsubmit': ''}],
-  \     'input': [{'type': 'text'}],
-  \     'label': [{'for': ''}],
-  \     'picker': [{'bindchange': ''}],
-  \     'radio-group': [{'bindchange': ''}],
-  \     'radio': [{'checked': ''}],
-  \     'switch': [{'checked': ''}],
-  \     'slider': [{'value': ''}],
-  \     'action-sheet': [{'bindchange': ''}],
-  \     'modal': [{'title': ''}],
-  \     'loading': [{'bindchange': ''}],
-  \     'toast': [{'duration': '1500'}],
-  \     'audio': [{'src': ''}],
-  \     'video': [{'src': ''}],
-  \     'image': [{'src': '', 'mode': 'scaleToFill'}],
-  \   }
-  \ },
-  \}
-]]

@@ -25,7 +25,6 @@ packer.init(config)
 
 local plugins = {
   { 'wbthomason/packer.nvim' },
-  -- { 'navarasu/onedark.nvim' },
   { 'nvim-lua/plenary.nvim' },
   { 'nvim-tree/nvim-web-devicons' },
   { 'hrsh7th/cmp-nvim-lsp' },
@@ -42,7 +41,7 @@ local plugins = {
   { 'justinmk/vim-sneak' },
   { 'williamboman/nvim-lsp-installer' },
   { 'neovim/nvim-lspconfig' },
-  { 'folke/todo-comments.nvim' },
+  -- { 'folke/todo-comments.nvim' },
   { 'windwp/nvim-autopairs' },
   { 'lukas-reineke/indent-blankline.nvim' },
   { 'prettier/vim-prettier' },

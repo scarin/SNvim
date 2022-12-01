@@ -16,7 +16,7 @@ local do_plugin_setup = function()
   require('nvim-autopairs').setup({
     disable_in_visualblock = true
   })
-  require('todo-comments').setup()
+  -- require('todo-comments').setup()
   require('alpha').setup(require('alpha.themes.startify').config)
   -- require('alpha').setup(require('alpha.themes.dashboard').config)
   require('config.comment')
