@@ -9,6 +9,7 @@ G_LANGUAGES = {
   'python',
   'rust',
   'vue',
+  'yaml',
 }
 
 G_LANGUAGES_SERVER = {
