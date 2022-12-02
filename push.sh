@@ -1,11 +1,14 @@
 #! /bin/bash
-
-message=$1
-if [ $# -lt 1 ]; then
-	echo "Need message param"
-	exit -1
+date=`date +%s`
+if [ $# == 0 ]
+then
+  message=`date +%s`
+  message="update_at_"$message
+else
+  message=$1
 fi
 
+echo $message
 git add .
-git commit . -m "$message"
+git commit -m "$message"
 git push
