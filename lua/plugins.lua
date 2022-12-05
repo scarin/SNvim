@@ -38,7 +38,7 @@ local plugins = {
   { 'saadparwaiz1/cmp_luasnip' },
   { 'numToStr/Comment.nvim' },
   { 'preservim/tagbar' },
-  { 'justinmk/vim-sneak' },
+
   { 'williamboman/nvim-lsp-installer' },
   { 'neovim/nvim-lspconfig' },
   -- { 'folke/todo-comments.nvim' },
@@ -59,6 +59,7 @@ local plugins = {
   { 'nvim-telescope/telescope.nvim' },
   { 'nvim-tree/nvim-tree.lua' },
   { 'goolord/alpha-nvim' },
+  { 'phaazon/hop.nvim' },
 }
 
 packer.startup({ function(use)

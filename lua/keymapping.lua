@@ -54,6 +54,9 @@ local function set_key_map()
       ['<Leader>`'] = '<Cmd>tabnew<CR><Cmd>terminal<CR><Cmd>startinsert<CR>',
 
       ['<Leader>j'] = '<Cmd>lua require("material.functions").toggle_style()<CR>',
+
+      -- hop
+      ['s'] = '<Cmd>HopLine<CR>'
     },
 
     ['v'] = {

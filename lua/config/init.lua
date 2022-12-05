@@ -21,6 +21,7 @@ local do_plugin_setup = function()
   -- require('alpha').setup(require('alpha.themes.dashboard').config)
   require('config.comment')
   require('config.prettier')
+  require('hop').setup()
 end
 
 do_plugin_setup()
