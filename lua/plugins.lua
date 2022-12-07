@@ -1,5 +1,4 @@
-local vim = vim
-vim.cmd [[packadd packer.nvim]]
+vim.cmd('packadd packer.nvim')
 
 local present, packer = pcall(require, "packer")
 if not present then
@@ -52,10 +51,7 @@ local plugins = {
     tag = "v2.*",
   },
   { 'nvim-lualine/lualine.nvim' },
-  {
-    'nvim-treesitter/nvim-treesitter',
-    run = function() require('nvim-treesitter.install').update({ with_sync = true }) end,
-  },
+  { 'nvim-treesitter/nvim-treesitter' },
   { 'nvim-telescope/telescope.nvim' },
   { 'nvim-tree/nvim-tree.lua' },
   { 'goolord/alpha-nvim' },

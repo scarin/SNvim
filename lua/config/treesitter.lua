@@ -1,8 +1,21 @@
+local languages = {
+  'bash',
+  'go',
+  'javascript',
+  'lua',
+  'python',
+  'rust',
+  'vue',
+  'yaml',
+  'help',
+  'vim',
+}
+
 local function tree_setup()
   local tree = require('nvim-treesitter.configs')
 
   tree.setup {
-    ensure_installed = G_LANGUAGES,
+    ensure_installed = languages,
 
     highlight = {
       enable = true,
