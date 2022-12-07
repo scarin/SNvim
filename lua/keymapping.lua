@@ -56,7 +56,7 @@ local function set_key_map()
       ['<Leader>j'] = '<Cmd>lua require("material.functions").toggle_style()<CR>',
 
       -- hop
-      ['s'] = '<Cmd>HopLine<CR>'
+      ['s'] = '<Cmd>HopWord<CR>'
     },
 
     ['v'] = {
