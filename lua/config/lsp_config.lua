@@ -1,3 +1,13 @@
+local languages_server = {
+  'bashls', -- bash
+  'gopls', -- go lang
+  'tsserver', -- javascript
+  'sumneko_lua', -- lua
+  'pyright', -- python
+  'rust_analyzer', -- rust
+  'vuels', -- vue
+}
+
 local vim = vim
 
 local opts = { noremap = true, silent = true }
@@ -63,7 +73,7 @@ local handlers = {
   ["textDocument/signatureHelp"] = vim.lsp.with(vim.lsp.handlers.signature_help, { border = "rounded" }),
 }
 
-local servers = G_LANGUAGES_SERVER
+local servers = languages_server
 for _, server in pairs(servers) do
   require('lspconfig')[server].setup {
     on_attach = on_attach,

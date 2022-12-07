@@ -1,7 +1,17 @@
+local languages_server = {
+  'bashls', -- bash
+  'gopls', -- go lang
+  'tsserver', -- javascript
+  'sumneko_lua', -- lua
+  'pyright', -- python
+  'rust_analyzer', -- rust
+  'vuels', -- vue
+}
+
 local function lsp_setup()
   local lsp = require('nvim-lsp-installer')
 
-  local servers = G_LANGUAGES_SERVER
+  local servers = languages_server
 
   lsp.setup({
     ensure_installed = servers,
