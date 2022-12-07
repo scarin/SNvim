@@ -9,7 +9,6 @@ local colors = {
   black  = '#080808',
   white  = '#c6c6c6',
   red    = '#ff5189',
-  -- violet = '#d183e8',
   violet = '#f29c39',
   grey   = '#303030',
 }
@@ -35,7 +34,6 @@ local bubbles_theme = {
 require('lualine').setup {
   options = {
     theme = bubbles_theme,
-    -- theme = 'dracula-nvim',
     component_separators = '|',
     section_separators = { left = '', right = '' },
   },
