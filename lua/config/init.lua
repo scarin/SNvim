@@ -8,7 +8,6 @@ local do_plugin_setup = function()
   require('config.bufferline')
   require('config.indent_blankline')
   require('config.bubbles')
-  require('config.material')
   require('config.telescope')
 
   require('nvim-autopairs').setup({
@@ -18,6 +17,10 @@ local do_plugin_setup = function()
   require('config.comment')
   require('config.prettier')
   require('hop').setup()
+
+  -- color
+  -- require('config.material')
+  require('config.onedarkpro')
 end
 
 do_plugin_setup()
