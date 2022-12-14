@@ -19,8 +19,7 @@ local do_plugin_setup = function()
   require('hop').setup()
 
   -- color
-  -- require('config.material')
-  require('config.onedarkpro')
+  require('config.material')
 end
 
 do_plugin_setup()
