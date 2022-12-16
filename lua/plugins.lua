@@ -56,7 +56,8 @@ local plugins = {
   { 'nvim-tree/nvim-tree.lua' },
   { 'goolord/alpha-nvim' },
   { 'phaazon/hop.nvim' },
-  { 'olimorris/onedarkpro.nvim' },
+  -- { 'olimorris/onedarkpro.nvim' },
+  { 'navarasu/onedark.nvim' },
 }
 
 packer.startup({ function(use)
