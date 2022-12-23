@@ -8,13 +8,12 @@ local do_plugin_setup = function()
   require('config.bufferline')
   require('config.indent_blankline')
   require('config.bubbles')
-  -- require('config.material')
-  require('config.onedarkpro')
+  -- require('config.colorscheme.material')
+  -- require('config.colorscheme.onedarkpro')
+  require('config.colorscheme.dracula')
   require('config.telescope')
 
-  require('nvim-autopairs').setup({
-    disable_in_visualblock = true
-  })
+  require('nvim-autopairs').setup({ disable_in_visualblock = true })
   require('alpha').setup(require('alpha.themes.startify').config)
   require('config.comment')
   require('config.prettier')

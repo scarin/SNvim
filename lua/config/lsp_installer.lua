@@ -6,6 +6,7 @@ local languages_server = {
   'pyright', -- python
   'rust_analyzer', -- rust
   'vuels', -- vue
+  'html' -- html
 }
 
 local function lsp_setup()

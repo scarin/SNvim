@@ -58,6 +58,7 @@ local plugins = {
   { 'phaazon/hop.nvim' },
   -- { 'olimorris/onedarkpro.nvim' },
   { 'navarasu/onedark.nvim' },
+  { 'Mofiqul/dracula.nvim' },
 }
 
 packer.startup({ function(use)
