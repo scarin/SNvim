@@ -2,7 +2,7 @@
 date=`date +%s`
 if [ $# == 0 ]
 then
-  message=`date +%s`
+  message=`date +%Y%m%d%H%M%S`
   message="update_at_"$message
 else
   message=$1
