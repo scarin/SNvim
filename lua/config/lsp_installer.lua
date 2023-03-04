@@ -5,7 +5,8 @@ local languages_server = {
   'sumneko_lua', -- lua
   'pyright', -- python
   'rust_analyzer', -- rust
-  'vuels', -- vue
+  'volar', -- rust
+  -- 'vuels', -- vue
   'html' -- html
 }
 

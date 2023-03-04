@@ -5,7 +5,8 @@ local languages_server = {
   'sumneko_lua', -- lua
   'pyright', -- python
   'rust_analyzer', -- rust
-  'vuels', -- vue
+  'volar', -- rust
+  -- 'vuels', -- vue
   'html' -- html
 }
 
@@ -76,6 +77,9 @@ local handlers = {
 
 local servers = languages_server
 for _, server in pairs(servers) do
+  if server == "sumneko_lua" then 
+    server = "lua_ls"
+  end
   require('lspconfig')[server].setup {
     on_attach = on_attach,
     capabilities = capabilities,
