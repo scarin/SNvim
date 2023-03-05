@@ -67,7 +67,7 @@ local function set_neovide_g()
       ['neovide_refresh_rate']            = 60,
       ['neovide_refresh_rate_idle']       = 5,
       ['neovide_remember_window_size']    = true,
-      ['neovide_transparency']            = 0.70,
+      ['neovide_transparency']            = 0.80,
       ['neovide_input_use_logo']          = false,
     }
     for k, v in pairs(g_neovide) do
