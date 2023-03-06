@@ -1,5 +1,17 @@
 local do_plugin_setup = function()
-  require('config.lsp_installer')
+  require('mason').setup({
+    ui = {
+      icons = {
+        package_installed = "✓",
+        package_pending = "➜",
+        package_uninstalled = "✗"
+      }
+    }
+  })
+  require('mason-lspconfig').setup {
+    ensure_installed = { "lua_ls", "rust_analyzer", "volar", "gopls", "bashls" }
+  }
+  -- require('config.lsp_installer')
   require('config.lsp_config')
   require('config.cmp_config')
 
@@ -17,7 +29,9 @@ local do_plugin_setup = function()
   require('alpha').setup(require('alpha.themes.startify').config)
   require('config.comment')
   require('config.prettier')
+  -- require('config.formatter')
   require('hop').setup()
+  require('config.volar_config')
 end
 
 do_plugin_setup()

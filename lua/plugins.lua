@@ -39,11 +39,14 @@ local plugins = {
   { 'preservim/tagbar' },
 
   { 'williamboman/nvim-lsp-installer' },
+  { 'williamboman/mason.nvim' },
+  { 'williamboman/mason-lspconfig.nvim' },
   { 'neovim/nvim-lspconfig' },
   -- { 'folke/todo-comments.nvim' },
   { 'windwp/nvim-autopairs' },
   { 'lukas-reineke/indent-blankline.nvim' },
   { 'prettier/vim-prettier' },
+  -- { 'mhartington/formatter.nvim' },
   { 'marko-cerovac/material.nvim' },
 
   {
