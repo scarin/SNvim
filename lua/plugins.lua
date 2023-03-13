@@ -62,6 +62,7 @@ local plugins = {
   -- { 'olimorris/onedarkpro.nvim' },
   { 'navarasu/onedark.nvim' },
   { 'Mofiqul/dracula.nvim' },
+  { 'windwp/nvim-ts-autotag' },
 }
 
 packer.startup({ function(use)

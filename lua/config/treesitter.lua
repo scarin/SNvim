@@ -35,6 +35,10 @@ local function tree_setup()
 
     indent = {
       enable = true
+    },
+
+    autotag = {
+      enable = true,
     }
   }
 end

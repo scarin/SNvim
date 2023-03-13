@@ -1,12 +1,12 @@
 local languages_server = {
-  'bashls', -- bash
-  'gopls', -- go lang
-  'tsserver', -- javascript
-  'sumneko_lua', -- lua
-  'pyright', -- python
+  'bashls',        -- bash
+  'gopls',         -- go lang
+  'tsserver',      -- javascript
+  'sumneko_lua',   -- lua
+  'pyright',       -- python
   'rust_analyzer', -- rust
-  'vuels', -- vue
-  'html' -- html
+  'vuels',         -- vue
+  'html'           -- html
 }
 
 local function lsp_setup()
@@ -17,7 +17,6 @@ local function lsp_setup()
   lsp.setup({
     ensure_installed = servers,
     automatic_installation = true,
-
     ui = {
       icons = {
         server_installed = "✓",
@@ -25,9 +24,7 @@ local function lsp_setup()
         server_uninstalled = "✗"
       }
     },
-
     log_level = vim.log.levels.ERROR,
-
     max_concurrent_installers = 16,
   })
 end

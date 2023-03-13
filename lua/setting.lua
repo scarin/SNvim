@@ -17,6 +17,7 @@ local function set_default_opt()
     foldmethod     = "manual",
     -- guifont        = 'SFMono_Nerd_Font:h14',
     guifont        = 'JetBrainsMono_Nerd_Font_Mono:h14',
+    -- guifont        = 'Hack_Nerd_Font_Mono:h14',
     -- guifont        = 'JetBrainsMono_NF:h13:b',
     -- guifont        = 'Iosevka_Nerd_Font:h15',
     hidden         = true,
@@ -67,7 +68,7 @@ local function set_neovide_g()
       ['neovide_refresh_rate']            = 60,
       ['neovide_refresh_rate_idle']       = 5,
       ['neovide_remember_window_size']    = true,
-      ['neovide_transparency']            = 0.90,
+      ['neovide_transparency']            = 0.97,
       ['neovide_input_use_logo']          = false,
     }
     for k, v in pairs(g_neovide) do

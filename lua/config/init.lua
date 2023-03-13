@@ -31,7 +31,7 @@ local do_plugin_setup = function()
   require('config.prettier')
   -- require('config.formatter')
   require('hop').setup()
-  require('config.volar_config')
+  -- require('config.volar_config')
 end
 
 do_plugin_setup()

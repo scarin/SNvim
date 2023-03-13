@@ -1,13 +1,13 @@
 local languages_server = {
-  'bashls', -- bash
-  'gopls', -- go lang
-  'tsserver', -- javascript
-  'sumneko_lua', -- lua
-  'pyright', -- python
+  'bashls',        -- bash
+  'gopls',         -- go lang
+  'tsserver',      -- javascript
+  'sumneko_lua',   -- lua
+  'pyright',       -- python
   'rust_analyzer', -- rust
-  'volar', -- vue 
-  -- 'vuels', -- vue
-  'html' -- html
+  -- 'volar', -- vue
+  'vuels',         -- vue
+  'html'           -- html
 }
 
 local vim = vim
@@ -71,13 +71,13 @@ capabilities = require('cmp_nvim_lsp').default_capabilities()
 
 -- LSP settings (for overriding per client)
 local handlers = {
-  ["textDocument/hover"] = vim.lsp.with(vim.lsp.handlers.hover, { border = "rounded" }),
-  ["textDocument/signatureHelp"] = vim.lsp.with(vim.lsp.handlers.signature_help, { border = "rounded" }),
+      ["textDocument/hover"] = vim.lsp.with(vim.lsp.handlers.hover, { border = "rounded" }),
+      ["textDocument/signatureHelp"] = vim.lsp.with(vim.lsp.handlers.signature_help, { border = "rounded" }),
 }
 
 local servers = languages_server
 for _, server in pairs(servers) do
-  if server == "sumneko_lua" then 
+  if server == "sumneko_lua" then
     server = "lua_ls"
   end
   require('lspconfig')[server].setup {
