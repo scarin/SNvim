@@ -5,7 +5,7 @@ local languages_server = {
   'sumneko_lua',   -- lua
   'pyright',       -- python
   'rust_analyzer', -- rust
-  -- 'volar', -- vue
+  -- 'volar',         -- vue
   'vuels',         -- vue
   'html'           -- html
 }
@@ -41,7 +41,8 @@ local on_attach = function(_, bufnr)
   vim.api.nvim_buf_set_keymap(bufnr, 'n', 'gr', '<cmd>lua vim.lsp.buf.references()<CR>', opts)
   vim.api.nvim_buf_set_keymap(bufnr, 'n', '<Leader>f', '<cmd>lua vim.lsp.buf.format { async = true }<CR>', opts)
 
-  vim.cmd('autocmd BufWritePre <buffer> lua vim.lsp.buf.formatting_sync()')
+  -- vim.cmd('autocmd BufWritePre <buffer> lua vim.lsp.buf.formatting_sync()')
+  vim.cmd('autocmd BufWritePre <buffer> lua vim.lsp.buf.format {async = true}')
   vim.cmd('autocmd CursorHold  <buffer> lua vim.lsp.buf.document_highlight()')
   vim.cmd('autocmd CursorHoldI <buffer> lua vim.lsp.buf.document_highlight()')
   vim.cmd('autocmd CursorMoved <buffer> lua vim.lsp.buf.clear_references()')
@@ -71,8 +72,8 @@ capabilities = require('cmp_nvim_lsp').default_capabilities()
 
 -- LSP settings (for overriding per client)
 local handlers = {
-      ["textDocument/hover"] = vim.lsp.with(vim.lsp.handlers.hover, { border = "rounded" }),
-      ["textDocument/signatureHelp"] = vim.lsp.with(vim.lsp.handlers.signature_help, { border = "rounded" }),
+  ["textDocument/hover"] = vim.lsp.with(vim.lsp.handlers.hover, { border = "rounded" }),
+  ["textDocument/signatureHelp"] = vim.lsp.with(vim.lsp.handlers.signature_help, { border = "rounded" }),
 }
 
 local servers = languages_server

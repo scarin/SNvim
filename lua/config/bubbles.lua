@@ -1,6 +1,5 @@
 -- Bubbles config for lualine
--- Author: lokesh-krishna
--- MIT license, see LICENSE for more details.
+-- Author: lokesh-krishna MIT license, see LICENSE for more details.
 
 -- stylua: ignore
 local colors = {
@@ -19,11 +18,9 @@ local bubbles_theme = {
     b = { fg = colors.white, bg = colors.grey },
     c = { fg = colors.black, bg = colors.black },
   },
-
   insert = { a = { fg = colors.black, bg = colors.blue } },
   visual = { a = { fg = colors.black, bg = colors.cyan } },
   replace = { a = { fg = colors.black, bg = colors.red } },
-
   inactive = {
     a = { fg = colors.white, bg = colors.black },
     b = { fg = colors.white, bg = colors.black },
@@ -34,7 +31,8 @@ local bubbles_theme = {
 require('lualine').setup {
   options = {
     -- theme = bubbles_theme,
-    theme = 'dracula-nvim',
+    -- theme = 'dracula-nvim',
+    theme = 'tokyonight',
     component_separators = '|',
     section_separators = { left = '', right = '' },
   },
@@ -43,7 +41,7 @@ require('lualine').setup {
       { 'mode', separator = { left = '' }, right_padding = 2 },
     },
     lualine_b = { 'filename', 'branch' }, --, 'branch'
-    lualine_c = { 'diagnostics' }, --  'fileformat'
+    lualine_c = { 'diagnostics' },        --  'fileformat'
     lualine_x = {},
     lualine_y = { 'filetype', 'progress' },
     lualine_z = {

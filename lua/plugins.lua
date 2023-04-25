@@ -48,6 +48,7 @@ local plugins = {
   { 'prettier/vim-prettier' },
   -- { 'mhartington/formatter.nvim' },
   { 'marko-cerovac/material.nvim' },
+  { 'folke/tokyonight.nvim' },
 
   {
     'akinsho/bufferline.nvim',
@@ -63,6 +64,7 @@ local plugins = {
   { 'navarasu/onedark.nvim' },
   { 'Mofiqul/dracula.nvim' },
   { 'windwp/nvim-ts-autotag' },
+  { 'ishan9299/nvim-solarized-lua' },
 }
 
 packer.startup({ function(use)
