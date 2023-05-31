@@ -21,7 +21,7 @@ local do_plugin_setup = function()
   require('config.indent_blankline')
   require('config.bubbles')
   -- require('config.colorscheme.material')
-  -- require('config.colorscheme.onedarkpro')
+  require('config.colorscheme.onedarkpro')
   -- require('config.colorscheme.dracula')
   require('config.telescope')
 
@@ -32,6 +32,7 @@ local do_plugin_setup = function()
   -- require('config.formatter')
   require('hop').setup()
   -- require('config.volar_config')
+  require('todo-comments').setup()
 end
 
 do_plugin_setup()

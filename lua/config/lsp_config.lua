@@ -42,7 +42,7 @@ local on_attach = function(_, bufnr)
   vim.api.nvim_buf_set_keymap(bufnr, 'n', '<Leader>f', '<cmd>lua vim.lsp.buf.format { async = true }<CR>', opts)
 
   -- vim.cmd('autocmd BufWritePre <buffer> lua vim.lsp.buf.formatting_sync()')
-  vim.cmd('autocmd BufWritePre <buffer> lua vim.lsp.buf.format {async = true}')
+  vim.cmd('autocmd BufWritePre <buffer> lua vim.lsp.buf.format {async = false}')
   vim.cmd('autocmd CursorHold  <buffer> lua vim.lsp.buf.document_highlight()')
   vim.cmd('autocmd CursorHoldI <buffer> lua vim.lsp.buf.document_highlight()')
   vim.cmd('autocmd CursorMoved <buffer> lua vim.lsp.buf.clear_references()')

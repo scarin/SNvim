@@ -53,11 +53,15 @@ local function set_key_map()
 
       ['<Leader>`'] = '<Cmd>tabnew<CR><Cmd>terminal<CR><Cmd>startinsert<CR>',
 
-      -- ['<Leader>j'] = '<Cmd>lua require("material.functions").toggle_style()<CR>',
+      ['<Leader>j'] = '<Cmd>lua require("material.functions").toggle_style()<CR>',
 
       -- hop
       ['s'] = '<Cmd>HopWord<CR>',
       ['t'] = '<Cmd>HopLine<CR>',
+
+      -- todo comments
+      [']t'] = '<Cmd>lua require("todo-comments").jump_next()<CR>',
+      ['[t'] = '<Cmd>lua require("todo-comments").jump_prev()<CR>',
     },
 
     ['v'] = {

@@ -58,5 +58,5 @@ require('material').setup({
   }
 })
 
-vim.g.material_style = "palenight" -- darker / lighter / oceanic / palenight / deep ocean
+vim.g.material_style = "lighter" -- darker / lighter / oceanic / palenight / deep ocean
 vim.cmd 'colorscheme material'

@@ -42,7 +42,7 @@ local plugins = {
   { 'williamboman/mason.nvim' },
   { 'williamboman/mason-lspconfig.nvim' },
   { 'neovim/nvim-lspconfig' },
-  -- { 'folke/todo-comments.nvim' },
+  { 'folke/todo-comments.nvim' },
   { 'windwp/nvim-autopairs' },
   { 'lukas-reineke/indent-blankline.nvim' },
   { 'prettier/vim-prettier' },
