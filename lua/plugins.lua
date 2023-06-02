@@ -65,6 +65,7 @@ local plugins = {
   { 'Mofiqul/dracula.nvim' },
   { 'windwp/nvim-ts-autotag' },
   { 'ishan9299/nvim-solarized-lua' },
+  { 'rebelot/kanagawa.nvim' },
 }
 
 packer.startup({ function(use)
