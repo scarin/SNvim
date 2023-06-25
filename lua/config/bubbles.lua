@@ -32,7 +32,7 @@ require('lualine').setup {
   options = {
     -- theme = bubbles_theme,
     -- theme = 'onedark',
-    theme = 'material',
+    theme = 'kanagawa',
     component_separators = '|',
     section_separators = { left = '', right = '' },
   },

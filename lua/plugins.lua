@@ -66,6 +66,7 @@ local plugins = {
   { 'windwp/nvim-ts-autotag' },
   { 'ishan9299/nvim-solarized-lua' },
   { 'rebelot/kanagawa.nvim' },
+  { "catppuccin/nvim",                as = "catppuccin" },
 }
 
 packer.startup({ function(use)
