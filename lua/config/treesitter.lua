@@ -7,7 +7,7 @@ local languages = {
   'rust',
   'vue',
   'yaml',
-  'help',
+  -- 'help',
   'vim',
 }
 

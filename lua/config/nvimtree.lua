@@ -1,3 +1,5 @@
+local vim = vim
+
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
 
@@ -26,6 +28,7 @@ local function on_attach(bufnr)
     return { desc = 'nvim-tree: ' .. desc, buffer = bufnr, noremap = true, silent = true, nowait = true }
   end
 
+  api.config.mappings.default_on_attach(bufnr)
 
   -- Default mappings. Feel free to modify or remove as you wish.
   --
@@ -99,6 +102,7 @@ local function ntree_setup()
     on_attach = on_attach,
     sort_by = "case_sensitive",
     -- disable_netrw = true,
+    --[[
     view = {
       adaptive_size = true,
       mappings = {
@@ -113,6 +117,7 @@ local function ntree_setup()
     filters = {
       dotfiles = true,
     },
+   ]]
   })
 end
 
