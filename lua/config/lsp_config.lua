@@ -6,10 +6,11 @@ local languages_server = {
   -- 'pyright',       -- python
   'pylsp',         -- python
   'rust_analyzer', -- rust
-  -- 'volar',         -- vue
-  'vuels',         -- vue
+  'volar',         -- vue
+  -- 'vuels',         -- vue
   'html',          -- html
   'clangd',        -- C
+  -- 'yamlls',        -- yaml
 }
 
 local vim = vim
