@@ -64,9 +64,11 @@ local plugins = {
   { 'navarasu/onedark.nvim' },
   { 'Mofiqul/dracula.nvim' },
   { 'windwp/nvim-ts-autotag' },
-  { 'ishan9299/nvim-solarized-lua' },
+  -- { 'ishan9299/nvim-solarized-lua' },
+  { 'altercation/vim-colors-solarized' },
   { 'rebelot/kanagawa.nvim' },
-  { "catppuccin/nvim",                as = "catppuccin" },
+  { "catppuccin/nvim",                 as = "catppuccin" },
+  { "ellisonleao/gruvbox.nvim" },
 }
 
 packer.startup({ function(use)
