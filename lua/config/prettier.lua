@@ -1,7 +1,7 @@
 local function set_prettier_g()
   local prettier_g = {
     -- ['prettier#quickfix_enabled'] = 0,
-    ['prettier#config#print_width'] = 120,
+    -- ['prettier#config#print_width'] = 120,
     -- ['prettier#config#tab_width'] = 2,
   }
 
