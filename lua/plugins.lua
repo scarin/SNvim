@@ -42,33 +42,26 @@ local plugins = {
   { 'williamboman/mason.nvim' },
   { 'williamboman/mason-lspconfig.nvim' },
   { 'neovim/nvim-lspconfig' },
+
   { 'folke/todo-comments.nvim' },
   { 'windwp/nvim-autopairs' },
   { 'lukas-reineke/indent-blankline.nvim' },
   { 'prettier/vim-prettier' },
-  -- { 'mhartington/formatter.nvim' },
-  { 'marko-cerovac/material.nvim' },
-  { 'folke/tokyonight.nvim' },
-
-  {
-    'akinsho/bufferline.nvim',
-    tag = "v2.*",
-  },
+  { 'akinsho/bufferline.nvim',            tag = "v2.*", },
   { 'nvim-lualine/lualine.nvim' },
   { 'nvim-treesitter/nvim-treesitter' },
   { 'nvim-telescope/telescope.nvim' },
   { 'nvim-tree/nvim-tree.lua' },
   { 'goolord/alpha-nvim' },
   { 'phaazon/hop.nvim' },
-  -- { 'olimorris/onedarkpro.nvim' },
-  { 'navarasu/onedark.nvim' },
-  { 'Mofiqul/dracula.nvim' },
   { 'windwp/nvim-ts-autotag' },
-  -- { 'ishan9299/nvim-solarized-lua' },
-  { 'altercation/vim-colors-solarized' },
+  { 'folke/which-key.nvim' },
+
+  -- colorscheme
   { 'rebelot/kanagawa.nvim' },
-  { "catppuccin/nvim",                 as = "catppuccin" },
-  { "ellisonleao/gruvbox.nvim" },
+  { 'navarasu/onedark.nvim' },
+  { 'marko-cerovac/material.nvim' },
+  { 'folke/tokyonight.nvim' },
 }
 
 packer.startup({ function(use)

@@ -29,10 +29,9 @@ local do_plugin_setup = function()
   require('alpha').setup(require('alpha.themes.startify').config)
   require('config.comment')
   require('config.prettier')
-  -- require('config.formatter')
   require('hop').setup()
-  -- require('config.volar_config')
   require('todo-comments').setup()
+  require('config.which_key')
 end
 
 do_plugin_setup()
