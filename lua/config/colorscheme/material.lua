@@ -1,3 +1,5 @@
+local vim = vim
+local colors = require 'material.colors'
 require('material').setup({
   contrast = {
     sidebars = false,            -- Enable contrast for sidebar-like windows ( for example Nvim-Tree )
@@ -24,8 +26,8 @@ require('material').setup({
     "qf"                 -- Darker qf list background
   },
   high_visibility = {
-    lighter = false, -- Enable higher contrast text for lighter style
-    darker = false   -- Enable higher contrast text for darker style
+    lighter = true, -- Enable higher contrast text for lighter style
+    darker = true   -- Enable higher contrast text for darker style
   },
   disable = {
     colored_cursor = false,  -- Disable the colored cursor
@@ -36,7 +38,10 @@ require('material').setup({
   },
   lualine_style = "default", -- Lualine style ( can be 'stealth' or 'default' )
   async_loading = true,      -- Load parts of the theme asyncronously for faster startup (turned on by default)
-  custom_highlights = {},    -- Overwrite highlights with your own
+  custom_highlights = {
+    -- LineNr = { bg = '#FF0000' },
+    -- CursorLine = { fg = colors.editor.constrast, underline = true },
+  }, -- Overwrite highlights with your own
   plugins = {
     -- Here, you can disable(set to false) plugins that you don't use or don't want to apply the theme to
     trouble = true,
@@ -58,5 +63,6 @@ require('material').setup({
   }
 })
 
-vim.g.material_style = "lighter" -- darker / lighter / oceanic / palenight / deep ocean
+vim.g.material_style = "darker" -- darker / lighter / oceanic / palenight / deep ocean
 vim.cmd 'colorscheme material'
+-- require("material.functions").find_style()

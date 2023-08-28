@@ -31,7 +31,6 @@ local do_plugin_setup = function()
   require('config.prettier')
   require('hop').setup()
   require('todo-comments').setup()
-  require('config.which_key')
 end
 
 do_plugin_setup()

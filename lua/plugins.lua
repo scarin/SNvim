@@ -55,7 +55,6 @@ local plugins = {
   { 'goolord/alpha-nvim' },
   { 'phaazon/hop.nvim' },
   { 'windwp/nvim-ts-autotag' },
-  { 'folke/which-key.nvim' },
 
   -- colorscheme
   { 'rebelot/kanagawa.nvim' },

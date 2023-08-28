@@ -15,6 +15,7 @@ local function set_key_map()
       ['U'] = '<C-r>',
       ['G'] = 'Gzz',
 
+      -- buffer line
       ['<Leader>1'] = '<Cmd>BufferLineGoToBuffer 1<CR>',
       ['<Leader>2'] = '<Cmd>BufferLineGoToBuffer 2<CR>',
       ['<Leader>3'] = '<Cmd>BufferLineGoToBuffer 3<CR>',
@@ -24,6 +25,10 @@ local function set_key_map()
       ['<Leader>7'] = '<Cmd>BufferLineGoToBuffer 7<CR>',
       ['<Leader>8'] = '<Cmd>BufferLineGoToBuffer 8<CR>',
       ['<Leader>9'] = '<Cmd>BufferLineGoToBuffer 9<CR>',
+
+      ['<Leader>bl'] = '<Cmd>BufferLineCloseLeft<CR>',
+      ['<Leader>bh'] = '<Cmd>BufferLineCloseRight<CR>',
+
 
       ['<Esc>'] = '<Cmd>noh<CR><Esc>',
       ['<C-s>'] = '<Cmd>w<CR>',
