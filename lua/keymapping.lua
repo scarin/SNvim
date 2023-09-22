@@ -26,8 +26,8 @@ local function set_key_map()
       ['<Leader>8'] = '<Cmd>BufferLineGoToBuffer 8<CR>',
       ['<Leader>9'] = '<Cmd>BufferLineGoToBuffer 9<CR>',
 
-      ['<Leader>bl'] = '<Cmd>BufferLineCloseLeft<CR>',
-      ['<Leader>bh'] = '<Cmd>BufferLineCloseRight<CR>',
+      ['<Leader>bh'] = '<Cmd>BufferLineCloseLeft<CR>',
+      ['<Leader>bl'] = '<Cmd>BufferLineCloseRight<CR>',
 
 
       ['<Esc>'] = '<Cmd>noh<CR><Esc>',

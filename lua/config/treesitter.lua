@@ -1,5 +1,5 @@
 local languages = {
-  'bash',
+  -- 'bash',
   'go',
   'javascript',
   'lua',
