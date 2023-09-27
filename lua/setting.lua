@@ -60,11 +60,11 @@ local function set_neovide_g()
   -- vim.cmd('autocmd vimenter * hi Normal guibg=NONE ctermbg=NONE')
   if vim.g.neovide then
     local g_neovide = {
-      ['neovide_cursor_animation_length'] = 0.02,
+      ['neovide_cursor_animation_length'] = 0.05,
       ['neovide_cursor_trail_size']       = 0.8,
       -- ['neovide_cursor_trail_length']     = 0.9,
-      -- ['neovide_cursor_vfx_mode']        = "pixiedust",
-      ['neovide_cursor_vfx_mode']         = "torpedo",
+      ['neovide_cursor_vfx_mode']         = "pixiedust",
+      -- ['neovide_cursor_vfx_mode']         = "torpedo",
       ['neovide_profiler']                = false,
       ['neovide_refresh_rate']            = 60,
       ['neovide_refresh_rate_idle']       = 5,
