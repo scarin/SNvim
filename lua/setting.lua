@@ -15,7 +15,7 @@ local function set_default_opt()
     fileencoding   = "utf-8",
     foldexpr       = "",
     foldmethod     = "manual",
-    guifont        = 'RobotoMono_Nerd_Font:h12.5',
+    guifont        = 'RobotoMono_Nerd_Font:h13',
     -- guifont        = 'Liga_SFMono_Nerd_Font:h13',
     -- guifont        = 'JetBrainsMono_Nerd_Font:h13',
     hidden         = true,
@@ -60,7 +60,7 @@ local function set_neovide_g()
   if vim.g.neovide then
     local g_neovide = {
       ['neovide_cursor_animation_length'] = 0.02,
-      ['neovide_cursor_trail_size']       = 0.9,
+      ['neovide_cursor_trail_size']       = 0.7,
       -- ['neovide_cursor_trail_length']     = 0.9,
       ['neovide_cursor_vfx_mode']         = "pixiedust",
       -- ['neovide_cursor_vfx_mode']         = "torpedo",
