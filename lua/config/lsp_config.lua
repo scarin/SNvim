@@ -1,15 +1,15 @@
 local languages_server = {
   'bashls',        -- bash
   'gopls',         -- go lang
-  'tsserver',      -- javascript
+  -- 'tsserver',      -- javascript
   'sumneko_lua',   -- lua
   -- 'pyright',       -- python
   'pylsp',         -- python
   'rust_analyzer', -- rust
-  -- 'volar',         -- vue
-  'vuels',         -- vue
-  'html',          -- html
-  'clangd',        -- C
+  'volar',         -- vue
+  -- 'vuels',         -- vue
+  -- 'html',          -- html
+  'clangd', -- C
   -- 'yamlls',        -- yaml
 }
 

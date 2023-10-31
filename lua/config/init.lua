@@ -28,9 +28,13 @@ local do_plugin_setup = function()
   require('nvim-autopairs').setup({ disable_in_visualblock = true })
   require('alpha').setup(require('alpha.themes.startify').config)
   require('config.comment')
-  require('config.prettier')
+  -- require('config.prettier')
   require('hop').setup()
   require('todo-comments').setup()
+  --[[
+  -- TODO,NOTE,FIX,WARNING
+  --]]
+  --
 end
 
 do_plugin_setup()
