@@ -102,22 +102,9 @@ local function ntree_setup()
     on_attach = on_attach,
     sort_by = "case_sensitive",
     -- disable_netrw = true,
-    --[[
     view = {
-      adaptive_size = true,
-      mappings = {
-        list = {
-          { key = "u", action = "dir_up" },
-        },
-      },
+      width = 50,
     },
-    renderer = {
-      group_empty = true,
-    },
-    filters = {
-      dotfiles = true,
-    },
-   ]]
   })
 end
 
