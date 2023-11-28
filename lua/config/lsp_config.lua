@@ -3,8 +3,8 @@ local languages_server = {
   'gopls',         -- go lang
   -- 'tsserver',      -- javascript
   'sumneko_lua',   -- lua
-  -- 'pyright',       -- python
-  'pylsp',         -- python
+  'pyright',       -- python
+  -- 'pylsp',         -- python
   'rust_analyzer', -- rust
   -- 'volar',         -- vue
   'vuels',         -- vue
