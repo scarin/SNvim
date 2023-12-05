@@ -49,7 +49,7 @@ local plugins = {
   { 'prettier/vim-prettier' },
   { 'akinsho/bufferline.nvim',            tag = "v2.*", },
   { 'nvim-lualine/lualine.nvim' },
-  { 'nvim-treesitter/nvim-treesitter' },
+  { 'nvim-treesitter/nvim-treesitter',    { run = ':TSUpdate' } },
   { 'nvim-telescope/telescope.nvim' },
   { 'nvim-tree/nvim-tree.lua' },
   { 'goolord/alpha-nvim' },
@@ -61,6 +61,7 @@ local plugins = {
   { 'navarasu/onedark.nvim' },
   { 'marko-cerovac/material.nvim' },
   { 'folke/tokyonight.nvim' },
+  { 'morhetz/gruvbox' },
 }
 
 packer.startup({ function(use)

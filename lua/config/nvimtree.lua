@@ -103,7 +103,7 @@ local function ntree_setup()
     sort_by = "case_sensitive",
     -- disable_netrw = true,
     view = {
-      width = 50,
+      width = 40,
     },
   })
 end
